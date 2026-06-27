@@ -7,6 +7,7 @@ var direction : Vector2 = Vector2.ZERO
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var state_machine : PlayerStateMachine = $StateMachine
+@onready var interact_ray : RayCast2D = $InteractRay
 
 func _ready() -> void:
 	state_machine.Initialize(self)
@@ -46,3 +47,10 @@ func AnimDirection() -> String:
 		return "left"
 	else:
 		return "right"
+		
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("interagir"):
+		if interact_ray.is_colliding():
+			var target = interact_ray.get_collider()
+			if target is Interactable:
+				target.interact()

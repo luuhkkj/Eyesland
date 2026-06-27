@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://borws0i4qaofy"]
 
-[ext_resource type="Script" uid="uid://b4njk6k0jgcs2" path="res://Player/Script/player.gd" id="1_4ntmi"]
+[ext_resource type="Script" uid="uid://b4njk6k0jgcs2" path="res://Player/ScriptPlayer/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://crasqyykynn7v" path="res://Player/Sprites/Sprite-0001-Sheet.png" id="2_4ntmi"]
-[ext_resource type="Script" uid="uid://47gh0avs6waa" path="res://Player/Script/player_state_machine.gd" id="3_btcbx"]
-[ext_resource type="Script" uid="uid://dqmyxkpwgx05e" path="res://Player/Script/state_idle.gd" id="4_gwnis"]
-[ext_resource type="Script" uid="uid://bsrd7qepohc02" path="res://Player/Script/state_walk.gd" id="5_k53q1"]
+[ext_resource type="Script" uid="uid://47gh0avs6waa" path="res://Player/ScriptPlayer/player_state_machine.gd" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://dqmyxkpwgx05e" path="res://Player/ScriptPlayer/state_idle.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://bsrd7qepohc02" path="res://Player/ScriptPlayer/state_walk.gd" id="5_k53q1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j53vh"]
 
@@ -173,6 +173,9 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=1088497943]
+collision_mask = 16
+motion_mode = 1
+wall_min_slide_angle = 0.17453292
 script = ExtResource("1_4ntmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2122201056]
@@ -195,3 +198,7 @@ script = ExtResource("4_gwnis")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1919441333]
 script = ExtResource("5_k53q1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=656717685]
+
+[node name="InteractRay" type="RayCast2D" parent="." unique_id=2042117905]
