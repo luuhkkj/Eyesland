@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="eyesland"
-run/main_scene="res://playground.tscn"
+run/main_scene="res://Historia/Ato I/Cenariopraia.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-DialogueManager="*uid://be78wh58gpd2j"
 
 [display]
 

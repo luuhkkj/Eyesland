@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://borws0i4qaofy"]
 
-[ext_resource type="Script" uid="uid://b4njk6k0jgcs2" path="res://Player/ScriptPlayer/player.gd" id="1_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://crasqyykynn7v" path="res://Player/Sprites/Sprite-0001-Sheet.png" id="2_4ntmi"]
-[ext_resource type="Script" uid="uid://47gh0avs6waa" path="res://Player/ScriptPlayer/player_state_machine.gd" id="3_btcbx"]
-[ext_resource type="Script" uid="uid://dqmyxkpwgx05e" path="res://Player/ScriptPlayer/state_idle.gd" id="4_gwnis"]
-[ext_resource type="Script" uid="uid://bsrd7qepohc02" path="res://Player/ScriptPlayer/state_walk.gd" id="5_k53q1"]
+[ext_resource type="Script" uid="uid://b4njk6k0jgcs2" path="res://Personagens/Flint/ScriptPlayer/player.gd" id="1_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://crasqyykynn7v" path="res://Personagens/Flint/SpritesFlint/Sprite-0001-Sheet.png" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://47gh0avs6waa" path="res://Personagens/Flint/ScriptPlayer/player_state_machine.gd" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://dqmyxkpwgx05e" path="res://Personagens/Flint/ScriptPlayer/state_idle.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://bsrd7qepohc02" path="res://Personagens/Flint/ScriptPlayer/state_walk.gd" id="5_k53q1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j53vh"]
 
