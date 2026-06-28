@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cdcq8qjuagt7x"]
+
+[ext_resource type="Script" uid="uid://t85o0bbaeqar" path="res://Geral/Elementos/Porta.gd" id="1_2yxqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtpgw"]
+
+[node name="Porta" type="Area2D" unique_id=1696348572]
+script = ExtResource("1_2yxqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1274858101]
+shape = SubResource("RectangleShape2D_vtpgw")
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=1965571795]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

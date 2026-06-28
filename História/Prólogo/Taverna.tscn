@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cukxac0o3hx2t"]
+
+[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/SpritesFlint/player.tscn" id="1_q20w3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j53vh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j53vh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xd64d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4kdw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lurjw"]
+
+[node name="Taverna" type="Node2D" unique_id=2071363005]
+
+[node name="Cenário" type="TileMap" parent="." unique_id=435745408]
+format = 2
+
+[node name="Moveis" type="Node2D" parent="." unique_id=1682472521]
+
+[node name="Balcao" type="StaticBody2D" parent="Moveis" unique_id=1136809944]
+
+[node name="Sprite2D" type="Sprite2D" parent="Moveis/Balcao" unique_id=149415243]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moveis/Balcao" unique_id=1905532570]
+shape = SubResource("RectangleShape2D_j53vh")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=646979699]
+
+[node name="Balconista" type="StaticBody2D" parent="NPCs" unique_id=1691936502]
+
+[node name="Sprite2D" type="Sprite2D" parent="NPCs/Balconista" unique_id=1844755488]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Balconista" unique_id=1017125338]
+shape = SubResource("CircleShape2D_j53vh")
+
+[node name="Interactable" type="Area2D" parent="NPCs/Balconista" unique_id=684373730]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Balconista/Interactable" unique_id=1768429527]
+shape = SubResource("CircleShape2D_xd64d")
+
+[node name="Bardo" type="StaticBody2D" parent="NPCs" unique_id=545183583]
+
+[node name="Sprite2D" type="Sprite2D" parent="NPCs/Bardo" unique_id=407948263]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Bardo" unique_id=726420428]
+shape = SubResource("CircleShape2D_g4kdw")
+
+[node name="Interactable" type="Area2D" parent="NPCs/Bardo" unique_id=2012274400]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Bardo/Interactable" unique_id=1471284137]
+shape = SubResource("CircleShape2D_lurjw")
+
+[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("1_q20w3")]
+
+[node name="CutsceneDirector" type="AnimationPlayer" parent="." unique_id=2073287126]
+
+[node name="Efeitos_Tempestade" type="CanvasLayer" parent="." unique_id=1697317134]
+
+[node name="Relampago" type="ColorRect" parent="Efeitos_Tempestade" unique_id=1023985541]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SomTrovao" type="AudioStreamPlayer2D" parent="Efeitos_Tempestade" unique_id=1394558791]
+
+[node name="MainCamera" type="Camera2D" parent="." unique_id=1186987665]
