@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bh103gc0uj4ro"]
 
-[ext_resource type="Texture2D" uid="uid://by8v5j1ktpq3g" path="res://História/Ato I/Acampamento Mara Voss.png" id="1_mv2hs"]
-[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/SpritesFlint/player.tscn" id="2_l2eii"]
+[ext_resource type="Texture2D" uid="uid://by8v5j1ktpq3g" path="res://Historia/Ato I/Acampamento Mara Voss.png" id="1_mv2hs"]
+[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_l2eii"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_xo376"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kv7c"]

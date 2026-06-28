@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2mpgua5r6kry"]
 
-[ext_resource type="Texture2D" uid="uid://dc4a2fy571dyx" path="res://Cenarios/Porto.png" id="1_eo2f4"]
-[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/SpritesFlint/player.tscn" id="2_k707l"]
+[ext_resource type="Texture2D" uid="uid://dc4a2fy571dyx" path="res://Tile Maps/Sprites/Porto.png" id="1_eo2f4"]
+[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_k707l"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_k707l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fb8i"]
@@ -1836,4 +1836,20 @@ destination_door_tag = "w"
 [node name="Spawn" parent="porta/Porta" index="1" unique_id=1965571795]
 position = Vector2(-41, -2)
 
+[node name="Porta_taverna" type="Node2D" parent="." unique_id=455951059]
+position = Vector2(197, 2)
+
+[node name="Porta" parent="Porta_taverna" unique_id=1567729999 instance=ExtResource("3_k707l")]
+scale = Vector2(-5.441172, -0.6741028)
+destination_level_tag = "taverna"
+destination_door_tag = "w"
+
+[node name="CollisionShape2D" parent="Porta_taverna/Porta" index="0" unique_id=1274858101]
+position = Vector2(-0.18378398, -8.900721)
+
+[node name="Spawn" parent="Porta_taverna/Porta" index="1" unique_id=1965571795]
+position = Vector2(-0.18378395, -35.602882)
+scale = Vector2(1.7386056, 1.885128)
+
 [editable path="porta/Porta"]
+[editable path="Porta_taverna/Porta"]

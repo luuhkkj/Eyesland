@@ -15,6 +15,11 @@ run/main_scene="res://Historia/Ato I/Cenariopraia.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueManager="*uid://be78wh58gpd2j"
+NavigationManager="*uid://chakegqjgnm28"
+
 [display]
 
 window/size/viewport_width=384

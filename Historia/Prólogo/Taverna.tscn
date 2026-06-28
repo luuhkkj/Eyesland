@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="1_q20w3"]
 [ext_resource type="Texture2D" uid="uid://c1a2fdt86gbk4" path="res://Cenarios/taverna(nao concluida)-frame0.png" id="1_xfk6i"]
 [ext_resource type="Texture2D" uid="uid://djmyj2ueysj7f" path="res://Personagens/Npcs/SpriteNpc/RPG_assets.png" id="2_84r7y"]
+[ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="4_dcu6h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_84r7y"]
 texture = ExtResource("1_xfk6i")
@@ -439,7 +440,7 @@ shape = SubResource("CircleShape2D_g4kdw")
 shape = SubResource("CircleShape2D_lurjw")
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("1_q20w3")]
-position = Vector2(127, 70)
+position = Vector2(-2, 79)
 
 [node name="CutsceneDirector" type="AnimationPlayer" parent="." unique_id=2073287126]
 
@@ -461,3 +462,20 @@ position = Vector2(-24, -67)
 
 [node name="MainCamera" type="Camera2D" parent="." unique_id=1186987665]
 position = Vector2(24, 6)
+
+[node name="porta" type="Node2D" parent="." unique_id=1616837248]
+position = Vector2(-1, 108)
+
+[node name="Porta_porto" parent="porta" unique_id=1696348572 instance=ExtResource("4_dcu6h")]
+position = Vector2(3, 3)
+scale = Vector2(8.319998, 1)
+destination_level_tag = "porto"
+destination_door_tag = "w"
+
+[node name="CollisionShape2D" parent="porta/Porta_porto" index="0" unique_id=1274858101]
+position = Vector2(-0.12019235, -1)
+
+[node name="Spawn" parent="porta/Porta_porto" index="1" unique_id=1965571795]
+position = Vector2(-0.48076937, -29)
+
+[editable path="porta/Porta_porto"]

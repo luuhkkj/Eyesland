@@ -1,10 +1,11 @@
 extends Node
 
 
-const scene_acampamento = preload("res://História/Ato I/acampamento.tscn")
-const scene_trilha = preload("res://História/Ato I/trilha.tscn")
-const scene_praia = preload("res://História/Ato I/playground.tscn")
-const scene_porto = preload("res://História/Ato I/porto.tscn")
+const scene_acampamento = preload("res://Historia/Ato I/acampamento.tscn")
+const scene_trilha = preload("res://Historia/Ato I/trilha.tscn")
+const scene_praia = preload("res://Historia/Ato I/Cenariopraia.tscn")
+const scene_porto = preload("res://Historia/Ato I/porto.tscn")
+const scene_taverna = preload("res://Historia/Prólogo/Taverna.tscn")
 
 var spawn_door_tag
 func go_to_level(level_tag, destination_tag):
@@ -18,6 +19,8 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = scene_praia
 		"porto":
 			scene_to_load = scene_porto
+		"taverna":
+			scene_to_load = scene_taverna
 			
 	if scene_to_load != null:
 		spawn_door_tag = destination_tag
