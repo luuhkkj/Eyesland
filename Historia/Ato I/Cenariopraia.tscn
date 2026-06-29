@@ -3,79 +3,29 @@
 [ext_resource type="PackedScene" uid="uid://bsuymgl6caw5h" path="res://Historia/Ato I/praia.tscn" id="1_p83ej"]
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_skl61"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_skl61"]
-[ext_resource type="Texture2D" uid="uid://32dtirvpp3k1" path="res://Cenarios/ondas -Sheet.png" id="4_2imxo"]
-
-[sub_resource type="Animation" id="Animation_2imxo"]
-resource_name = "Ondas"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 5, 10, 15, 20]
-}
-
-[sub_resource type="Animation" id="Animation_ew0iv"]
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 5, 10, 15, 20]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5q3e7"]
-_data = {
-&"Ondas": SubResource("Animation_2imxo"),
-&"RESET": SubResource("Animation_ew0iv")
-}
 
 [node name="Playground" type="Node2D" unique_id=553601854]
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("2_skl61")]
-position = Vector2(176, 88)
+position = Vector2(244, 115)
 
 [node name="Praia" parent="." unique_id=1435488439 instance=ExtResource("1_p83ej")]
 position = Vector2(154, 83)
 layer_0/tile_data = PackedInt32Array(0, 196608, 2, 65536, 196608, 3, 131072, 196608, 4, 1, 262144, 2, 65537, 262144, 3, 131073, 262144, 4, 2, 327680, 2, 65538, 327680, 3, 131074, 327680, 4, 3, 393216, 2, 131075, 393216, 4, 4, 458752, 2, 65540, 458752, 3, 196612, 458752, 5, 5, 524288, 2, 65541, 524288, 3, 131077, 524288, 4, 196613, 524288, 5, 6, 589824, 2, 65542, 589824, 3, 131078, 589824, 4, 196614, 589824, 5, 7, 655360, 2, 65543, 655360, 3, 131079, 655360, 4, 196615, 655360, 5, 8, 720896, 2, 65544, 720896, 3, 131080, 720896, 4, 196616, 720896, 5, 196611, 393216, 5, 196610, 327680, 5, 196609, 262144, 5, 196608, 196608, 5, 131076, 458752, 4, 65539, 393216, 3, -65539, 0, 0, -3, 0, 1, 65533, 0, 2, 131069, 0, 3, 196605, 0, 4, 262141, 0, 5, -65538, 65536, 0, -2, 65536, 1, 65534, 65536, 2, 131070, 65536, 3, 196606, 65536, 4, 262142, 65536, 5, -65537, 131072, 0, -1, 131072, 1, 65535, 131072, 2, 131071, 131072, 3, 196607, 131072, 4, 262143, 131072, 5, -131072, 196608, 0, -65536, 196608, 1, -131071, 262144, 0, -65535, 262144, 1, -131070, 327680, 0, -65534, 327680, 1, -131069, 393216, 0, -65533, 393216, 1, -131068, 458752, 0, -65532, 458752, 1, -131067, 524288, 0, -65531, 524288, 1, -131066, 589824, 0, -65530, 589824, 1, -131065, 655360, 0, -65529, 655360, 1, -131064, 720896, 0, -65528, 720896, 1)
 
-[node name="porta" type="Node2D" parent="." unique_id=893626231]
+[node name="Doors" type="Node2D" parent="." unique_id=893626231]
 
-[node name="Porta" parent="porta" unique_id=1696348572 instance=ExtResource("3_skl61")]
+[node name="Door" parent="Doors" unique_id=1696348572 instance=ExtResource("3_skl61")]
 position = Vector2(430, 102)
 destination_level_tag = "acampamento"
 destination_door_tag = "w"
 
-[node name="CollisionShape2D" parent="porta/Porta" index="0" unique_id=1274858101]
+[node name="CollisionShape2D" parent="Doors/Door" index="0" unique_id=1274858101]
 position = Vector2(2, 7)
 scale = Vector2(1, 2.6799998)
 
-[node name="Spawn" parent="porta/Porta" index="1" unique_id=1965571795]
+[node name="Spawn" parent="Doors/Door" index="1" unique_id=1965571795]
 position = Vector2(-22, 6)
 scale = Vector2(1.1695155, 0.75394994)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1083976380]
-position = Vector2(94, 115)
-scale = Vector2(1, 0.90277773)
-texture = ExtResource("4_2imxo")
-hframes = 25
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1636720299]
-libraries/ = SubResource("AnimationLibrary_5q3e7")
-autoplay = &"RESET"
-
-[editable path="porta/Porta"]
+[editable path="Doors/Door"]
