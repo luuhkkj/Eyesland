@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dct1gdq8jiryj"]
 
-[ext_resource type="Texture2D" uid="uid://4tffo0qkb7gt" path="res://Cenarios/Trilha dos mapas rasgados - Copia.png" id="1_prrhx"]
-[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/SpritesFlint/player.tscn" id="2_iaxqi"]
+[ext_resource type="Texture2D" uid="uid://4tffo0qkb7gt" path="res://Tile Maps/Sprites/Trilha dos mapas rasgados - Copia.png" id="1_prrhx"]
+[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_iaxqi"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_cb3jf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srqhe"]
@@ -4338,11 +4338,6 @@ layer_0/tile_data = PackedInt32Array(65536, 7864320, 0, 131072, 7864320, 1, 1966
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("2_iaxqi")]
 position = Vector2(44, 106)
-
-[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=1595483974]
-position = Vector2(1, -4)
-scale = Vector2(1, 1.2)
-limit_left = 5000
 
 [node name="porta" type="Node2D" parent="." unique_id=1292276239]
 

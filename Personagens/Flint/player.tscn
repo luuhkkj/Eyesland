@@ -59,7 +59,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_k53q1"]
 resource_name = "idle_right"
-length = 0.65
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -198,7 +198,5 @@ script = ExtResource("4_gwnis")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1919441333]
 script = ExtResource("5_k53q1")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=656717685]
 
 [node name="InteractRay" type="RayCast2D" parent="." unique_id=2042117905]
