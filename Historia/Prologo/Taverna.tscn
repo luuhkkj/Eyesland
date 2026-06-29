@@ -503,22 +503,24 @@ position = Vector2(-24, -67)
 [node name="MainCamera" type="Camera2D" parent="." unique_id=1186987665]
 position = Vector2(24, 6)
 
-[node name="porta" type="Node2D" parent="." unique_id=1616837248]
-position = Vector2(-1, 108)
+[node name="Doors" type="Node2D" parent="." unique_id=1616837248]
+position = Vector2(-11, -90)
 
-[node name="Porta_porto" parent="porta" unique_id=1696348572 instance=ExtResource("4_xuhr5")]
+[node name="Door_porto" parent="Doors" unique_id=1696348572 instance=ExtResource("4_xuhr5")]
 position = Vector2(3, 3)
 scale = Vector2(8.319998, 1)
 destination_level_tag = "porto"
 destination_door_tag = "w"
 
-[node name="CollisionShape2D" parent="porta/Porta_porto" index="0" unique_id=1274858101]
-position = Vector2(-0.12019235, -1)
+[node name="CollisionShape2D" parent="Doors/Door_porto" index="0" unique_id=1274858101]
+position = Vector2(-0.8413464, 1)
+scale = Vector2(0.35096157, 1)
 
-[node name="Spawn" parent="porta/Porta_porto" index="1" unique_id=1965571795]
-position = Vector2(-0.48076937, -29)
+[node name="Spawn" parent="Doors/Door_porto" index="1" unique_id=1965571795]
+position = Vector2(0.12019233, 22)
+scale = Vector2(0.19230771, 1)
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("3_4uwyw")]
-position = Vector2(-108, -10)
+position = Vector2(-5, -16)
 
-[editable path="porta/Porta_porto"]
+[editable path="Doors/Door_porto"]

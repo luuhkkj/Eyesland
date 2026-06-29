@@ -2119,17 +2119,6 @@ destination_door_tag = "w"
 [node name="Spawn" parent="Doors/Door_p" index="1" unique_id=1965571795]
 position = Vector2(23, -2)
 
-[node name="Spawn" parent="Doors/Porta_W" index="1" unique_id=1965571795]
-position = Vector2(-26, 3)
-
-[node name="Porta_p" parent="Doors" unique_id=1700003844 instance=ExtResource("3_xo376")]
-position = Vector2(10, 110)
-destination_level_tag = "praia"
-destination_door_tag = "w"
-
-[node name="Spawn" parent="Doors/Porta_p" index="1" unique_id=1965571795]
-position = Vector2(23, -5)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=252137829]
 position = Vector2(288, 53)
 texture = ExtResource("4_q6kpn")
@@ -2145,5 +2134,3 @@ autoplay = &"Fogueira"
 position = Vector2(62, 107)
 
 [editable path="Doors/Door_p"]
-[editable path="Doors/Porta_W"]
-[editable path="Doors/Porta_p"]
