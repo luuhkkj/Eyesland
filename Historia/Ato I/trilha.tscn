@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4tffo0qkb7gt" path="res://Tile Maps/Sprites/Trilha dos mapas rasgados - Copia.png" id="1_prrhx"]
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_iaxqi"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_cb3jf"]
+[ext_resource type="Texture2D" uid="uid://dxslgmr6gn3e5" path="res://Cenarios/pedaço fantasminha irritado.png" id="4_2xsbe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srqhe"]
 texture = ExtResource("1_prrhx")
@@ -4329,6 +4330,44 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_srqhe")
 
+[sub_resource type="Animation" id="Animation_4x0rq"]
+resource_name = "Fantasmas"
+length = 2.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FantasmaIrritado:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 10, 16, 22, 28, 34, 40, 46, 52, 58, 64, 70, 76]
+}
+
+[sub_resource type="Animation" id="Animation_sk6wc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FantasmaIrritado:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2xsbe"]
+_data = {
+&"Fantasmas": SubResource("Animation_4x0rq"),
+&"RESET": SubResource("Animation_sk6wc")
+}
+
 [node name="Trilha" type="Node2D" unique_id=422612659]
 
 [node name="trilha" type="TileMap" parent="." unique_id=1399458365]
@@ -4352,5 +4391,16 @@ position = Vector2(1, -1)
 
 [node name="Spawn" parent="porta/Porta_e" index="1" unique_id=1965571795]
 position = Vector2(23, -4)
+
+[node name="FantasmaIrritado" type="Sprite2D" parent="." unique_id=1903476641]
+position = Vector2(287, 44)
+texture = ExtResource("4_2xsbe")
+hframes = 78
+vframes = 4
+frame = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1449566552]
+libraries/ = SubResource("AnimationLibrary_2xsbe")
+autoplay = &"Fantasmas"
 
 [editable path="porta/Porta_e"]
