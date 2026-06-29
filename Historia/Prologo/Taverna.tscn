@@ -482,9 +482,6 @@ physics_interpolation_mode = 1
 physics_interpolation_mode = 1
 shape = SubResource("CircleShape2D_lurjw")
 
-[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("3_4uwyw")]
-position = Vector2(-108, -10)
-
 [node name="CutsceneDirector" type="AnimationPlayer" parent="." unique_id=2073287126]
 
 [node name="Efeitos_Tempestade" type="CanvasLayer" parent="." unique_id=1697317134]
@@ -520,5 +517,8 @@ position = Vector2(-0.12019235, -1)
 
 [node name="Spawn" parent="porta/Porta_porto" index="1" unique_id=1965571795]
 position = Vector2(-0.48076937, -29)
+
+[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("3_4uwyw")]
+position = Vector2(-108, -10)
 
 [editable path="porta/Porta_porto"]

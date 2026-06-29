@@ -5,7 +5,7 @@ const scene_acampamento = preload("res://Historia/Ato I/acampamento.tscn")
 const scene_trilha = preload("res://Historia/Ato I/trilha.tscn")
 const scene_praia = preload("res://Historia/Ato I/Cenariopraia.tscn")
 const scene_porto = preload("res://Historia/Ato I/porto.tscn")
-const scene_taverna = preload("res://Historia/Prólogo/Taverna.tscn")
+const scene_taverna = preload("res://Historia/Prologo/Taverna.tscn")
 
 signal on_trigger_player_spawn
 
