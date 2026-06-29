@@ -464,7 +464,7 @@ position = Vector2(-24, -67)
 position = Vector2(24, 6)
 
 [node name="Doors" type="Node2D" parent="." unique_id=1616837248]
-position = Vector2(-1, 108)
+position = Vector2(-17, -82)
 
 [node name="Door_porto" parent="Doors" unique_id=1696348572 instance=ExtResource("4_dcu6h")]
 position = Vector2(3, 3)
@@ -473,7 +473,8 @@ destination_level_tag = "porto"
 destination_door_tag = "w"
 
 [node name="CollisionShape2D" parent="Doors/Door_porto" index="0" unique_id=1274858101]
-position = Vector2(-0.12019235, -1)
+position = Vector2(0.24038458, -11)
+scale = Vector2(0.40865368, 1)
 
 [node name="Spawn" parent="Doors/Door_porto" index="1" unique_id=1965571795]
 position = Vector2(-0.48076937, -29)

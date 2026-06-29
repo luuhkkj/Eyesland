@@ -7,7 +7,7 @@
 [node name="Playground" type="Node2D" unique_id=553601854]
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("2_skl61")]
-position = Vector2(244, 115)
+position = Vector2(150, 116)
 
 [node name="Praia" parent="." unique_id=1435488439 instance=ExtResource("1_p83ej")]
 position = Vector2(154, 83)
@@ -17,7 +17,7 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 2, 65536, 196608, 3, 131072, 196
 
 [node name="Door" parent="Doors" unique_id=1696348572 instance=ExtResource("3_skl61")]
 position = Vector2(430, 102)
-destination_level_tag = "acampamento"
+destination_level_tag = "trilha"
 destination_door_tag = "w"
 
 [node name="CollisionShape2D" parent="Doors/Door" index="0" unique_id=1274858101]
