@@ -1866,7 +1866,7 @@ destination_level_tag = "taverna"
 destination_door_tag = "w"
 
 [node name="CollisionShape2D" parent="Doors/Door" index="0" unique_id=1274858101]
-position = Vector2(-0.18378398, -7.4172716)
+position = Vector2(-5.9604645e-08, -20.768349)
 scale = Vector2(0.32813123, 1)
 
 [node name="Spawn" parent="Doors/Door" index="1" unique_id=1965571795]

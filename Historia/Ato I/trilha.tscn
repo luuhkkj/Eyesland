@@ -4408,16 +4408,16 @@ autoplay = &"Fantasmas"
 scale = Vector2(1.1900915, 0.9902699)
 
 [node name="Door_" parent="Doors2" unique_id=1296595227 instance=ExtResource("3_cb3jf")]
-position = Vector2(372, 110)
+position = Vector2(306.6991, 110.071)
 destination_level_tag = "acampamento"
 destination_door_tag = "w"
 
 [node name="CollisionShape2D" parent="Doors2/Door_" index="0" unique_id=1274858101]
-position = Vector2(-1, -3)
+position = Vector2(3.8146973e-06, 3.5762787e-07)
 scale = Vector2(1, 1.6800001)
 
 [node name="Spawn" parent="Doors2/Door_" index="1" unique_id=1965571795]
-position = Vector2(-28, -3)
+position = Vector2(-26.888681, 7.1525574e-07)
 
 [editable path="Doors/Door_e"]
 [editable path="Doors2/Door_"]
