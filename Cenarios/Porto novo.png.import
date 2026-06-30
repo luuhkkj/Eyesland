@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc4a2fy571dyx"
-path="res://.godot/imported/Porto.png-67603a48ecabe2d367b732385ba432eb.ctex"
+uid="uid://cqpfnj1wd70jf"
+path="res://.godot/imported/Porto novo.png-189b05c45a2256d5fddd706b984076ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile Maps/Sprites/Porto.png"
-dest_files=["res://.godot/imported/Porto.png-67603a48ecabe2d367b732385ba432eb.ctex"]
+source_file="res://Cenarios/Porto novo.png"
+dest_files=["res://.godot/imported/Porto novo.png-189b05c45a2256d5fddd706b984076ac.ctex"]
 
 [params]
 

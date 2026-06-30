@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://qa6vwcg6xrfn"]
+
+[ext_resource type="Script" uid="uid://ciy54sgy5a34y" path="res://Geral/ScriptGeral/menuopcao.gd" id="1_oub6r"]
+[ext_resource type="Texture2D" uid="uid://cqnsk5bn40llg" path="res://Geral/img/fotomenu2.png" id="2_v488e"]
+[ext_resource type="FontFile" uid="uid://crua2ihel7n33" path="res://Geral/Fonte/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="2_wgm8w"]
+
+[node name="Menu" type="Control" unique_id=1541134960]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oub6r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=3482099]
+position = Vector2(187, 104.75)
+scale = Vector2(0.25621548, 0.19475137)
+texture = ExtResource("2_v488e")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1438009644]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -30.0
+offset_right = 31.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2095829085]
+layout_mode = 2
+
+[node name="Volume" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1510175793]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wgm8w")
+text = "Volume
+"
+
+[node name="Voltar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=427023056]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wgm8w")
+text = "Voltar"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]

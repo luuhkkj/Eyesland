@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4tffo0qkb7gt"
-path="res://.godot/imported/Trilha dos mapas rasgados - Copia.png-b206b3a1cc90a682435593b4898ce2a5.ctex"
+path="res://.godot/imported/Trilha dos mapas rasgados - Copia.png-51aed33d4c52362b0170ef1467224637.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile Maps/Sprites/Trilha dos mapas rasgados - Copia.png"
-dest_files=["res://.godot/imported/Trilha dos mapas rasgados - Copia.png-b206b3a1cc90a682435593b4898ce2a5.ctex"]
+source_file="res://Cenarios/Trilha dos mapas rasgados - Copia.png"
+dest_files=["res://.godot/imported/Trilha dos mapas rasgados - Copia.png-51aed33d4c52362b0170ef1467224637.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i1xh7s2278ym"
-path="res://.godot/imported/pedaço fantasminha sumindo.png-9f062fe88097e5f1b9f7a622be17a9f3.ctex"
+uid="uid://cqnsk5bn40llg"
+path="res://.godot/imported/fotomenu2.png-f004eca93727b275654f6aa8b1ede727.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cenarios/pedaço fantasminha sumindo.png"
-dest_files=["res://.godot/imported/pedaço fantasminha sumindo.png-9f062fe88097e5f1b9f7a622be17a9f3.ctex"]
+source_file="res://Geral/img/fotomenu2.png"
+dest_files=["res://.godot/imported/fotomenu2.png-f004eca93727b275654f6aa8b1ede727.ctex"]
 
 [params]
 

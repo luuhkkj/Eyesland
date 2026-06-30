@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_skl61"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_skl61"]
 [ext_resource type="Texture2D" uid="uid://32dtirvpp3k1" path="res://Cenarios/ondas -Sheet.png" id="4_2imxo"]
+[ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="5_ew0iv"]
 
 [sub_resource type="Animation" id="Animation_2imxo"]
 resource_name = "Ondas"
@@ -83,5 +84,7 @@ limit_left = 55
 limit_top = 17
 limit_right = 442
 limit_bottom = 213
+
+[node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_ew0iv")]
 
 [editable path="Doors/Door_"]

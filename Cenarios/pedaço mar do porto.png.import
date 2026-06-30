@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s28pxv5wvro6"
-path="res://.godot/imported/pedaço do porto.png-f8ef378aec274120e302e8069b33926c.ctex"
+uid="uid://dgqftcw3i14k1"
+path="res://.godot/imported/pedaço mar do porto.png-7e2cbde2390ae7e421b6262020171285.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cenarios/pedaço do porto.png"
-dest_files=["res://.godot/imported/pedaço do porto.png-f8ef378aec274120e302e8069b33926c.ctex"]
+source_file="res://Cenarios/pedaço mar do porto.png"
+dest_files=["res://.godot/imported/pedaço mar do porto.png-7e2cbde2390ae7e421b6262020171285.ctex"]
 
 [params]
 

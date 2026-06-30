@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djmyj2ueysj7f"
-path="res://.godot/imported/RPG_assets.png-f9b01304faf66185ddacf495020ff35b.ctex"
+uid="uid://jrcflwg634s2"
+path="res://.godot/imported/TAVERNA ELEMENTOS COM MOVIMENTO - SHEET.png-eb2682a3b2ef29531aec1b5b40649dea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personagens/Npcs/SpriteNpc/RPG_assets.png"
-dest_files=["res://.godot/imported/RPG_assets.png-f9b01304faf66185ddacf495020ff35b.ctex"]
+source_file="res://Cenarios/TAVERNA ELEMENTOS COM MOVIMENTO - SHEET.png"
+dest_files=["res://.godot/imported/TAVERNA ELEMENTOS COM MOVIMENTO - SHEET.png-eb2682a3b2ef29531aec1b5b40649dea.ctex"]
 
 [params]
 

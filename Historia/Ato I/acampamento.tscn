@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bh103gc0uj4ro"]
 
-[ext_resource type="Texture2D" uid="uid://by8v5j1ktpq3g" path="res://Historia/Ato I/Acampamento Mara Voss.png" id="1_mv2hs"]
+[ext_resource type="Texture2D" uid="uid://by8v5j1ktpq3g" path="res://Cenarios/Acampamento Mara Voss.png" id="1_mv2hs"]
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_l2eii"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_xo376"]
 [ext_resource type="Texture2D" uid="uid://bqq375y75em3v" path="res://Cenarios/pedaço da fogueira.png" id="4_q6kpn"]
+[ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="5_q6kpn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kv7c"]
 texture = ExtResource("1_mv2hs")
@@ -2138,5 +2139,7 @@ limit_left = 0
 limit_top = 0
 limit_right = 384
 limit_bottom = 207
+
+[node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_q6kpn")]
 
 [editable path="Doors/Door_p"]

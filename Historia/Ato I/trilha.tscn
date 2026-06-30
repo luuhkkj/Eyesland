@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dct1gdq8jiryj"]
 
-[ext_resource type="Texture2D" uid="uid://4tffo0qkb7gt" path="res://Tile Maps/Sprites/Trilha dos mapas rasgados - Copia.png" id="1_prrhx"]
+[ext_resource type="Texture2D" uid="uid://4tffo0qkb7gt" path="res://Cenarios/Trilha dos mapas rasgados - Copia.png" id="1_prrhx"]
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="2_iaxqi"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_cb3jf"]
 [ext_resource type="Texture2D" uid="uid://dxslgmr6gn3e5" path="res://Cenarios/pedaço fantasminha irritado.png" id="4_2xsbe"]
+[ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="5_sk6wc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srqhe"]
 texture = ExtResource("1_prrhx")
@@ -4439,6 +4440,8 @@ limit_left = 0
 limit_top = 16
 limit_right = 384
 limit_bottom = 224
+
+[node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_sk6wc")]
 
 [editable path="Doors/Door_e"]
 [editable path="Doors2/Door_"]

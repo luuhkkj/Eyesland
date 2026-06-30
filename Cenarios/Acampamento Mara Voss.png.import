@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1a2fdt86gbk4"
-path="res://.godot/imported/taverna(nao concluida)-frame0.png-30c5444cd271c627f2ea74d10cd73879.ctex"
+uid="uid://by8v5j1ktpq3g"
+path="res://.godot/imported/Acampamento Mara Voss.png-d6b02fa59b4ed77e5b4ea7da09639018.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cenarios/taverna(nao concluida)-frame0.png"
-dest_files=["res://.godot/imported/taverna(nao concluida)-frame0.png-30c5444cd271c627f2ea74d10cd73879.ctex"]
+source_file="res://Cenarios/Acampamento Mara Voss.png"
+dest_files=["res://.godot/imported/Acampamento Mara Voss.png-d6b02fa59b4ed77e5b4ea7da09639018.ctex"]
 
 [params]
 

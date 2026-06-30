@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b7i7llvqr5i7d"]
+
+[ext_resource type="Script" uid="uid://ce0ooak3lqcqq" path="res://menu.gd" id="1_uaxt7"]
+[ext_resource type="Texture2D" uid="uid://cqnsk5bn40llg" path="res://Geral/img/fotomenu2.png" id="2_2wj8t"]
+[ext_resource type="FontFile" uid="uid://crua2ihel7n33" path="res://Geral/Fonte/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="2_ywq6d"]
+
+[node name="Menu" type="Control" unique_id=1541134960]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uaxt7")
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=516307489]
+position = Vector2(185.00002, 104.875)
+scale = Vector2(0.25552487, 0.19313997)
+texture = ExtResource("2_2wj8t")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1438009644]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -46.0
+offset_right = 62.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2095829085]
+layout_mode = 2
+
+[node name="Jogar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1666142901]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ywq6d")
+text = "Jogar"
+
+[node name="Configuracoes" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1267758582]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ywq6d")
+text = "Configurações
+"
+
+[node name="Creditos" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1974810400]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ywq6d")
+text = "Créditos"
+
+[node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=962084567]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ywq6d")
+text = "Sair
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Configuracoes" to="." method="_on_configuracoes_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
