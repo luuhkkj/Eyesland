@@ -13,12 +13,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oub6r")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=3482099]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1116433467]
 position = Vector2(187, 104.75)
 scale = Vector2(0.25621548, 0.19475137)
 texture = ExtResource("2_v488e")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1438009644]
+[node name="MarginContainer" type="ColorRect" parent="." unique_id=1891997757]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -71.99999
+offset_right = 82.0
+offset_bottom = 71.99999
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5372549)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2095829085]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,14 +41,11 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -31.0
-offset_top = -30.0
+offset_top = -62.0
 offset_right = 31.0
-offset_bottom = 30.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2095829085]
-layout_mode = 2
 
 [node name="Volume" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1510175793]
 layout_mode = 2
@@ -46,5 +58,17 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wgm8w")
 text = "Voltar"
 
+[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer" unique_id=46018195]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wgm8w")
+text = "Menu"
+
+[node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1180489328]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wgm8w")
+text = "Sair do jogo"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]

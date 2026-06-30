@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 NavigationManager="*uid://chakegqjgnm28"
 TransitionScreen="*uid://c0t2e5co4h4dg"
 DialogScreen="*uid://cadns2yw6nkim"
+GameManager="*uid://dgrs2aerb4kts"
 
 [dialogic]
 

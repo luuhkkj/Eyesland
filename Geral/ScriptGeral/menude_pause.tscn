@@ -47,5 +47,12 @@ theme_override_fonts/font = ExtResource("2_e0tju")
 theme_override_font_sizes/font_size = 11
 text = "Voltar"
 
+[node name="Sair" type="Button" parent="ColorRect/VBoxContainer" unique_id=1681368188]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e0tju")
+theme_override_font_sizes/font_size = 11
+text = "Sair do jogo"
+
 [connection signal="pressed" from="ColorRect/VBoxContainer/Configurações" to="." method="_on_configurações_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Sair" to="." method="_on_sair_pressed"]

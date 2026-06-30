@@ -54,7 +54,7 @@ text = "Créditos"
 [node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=962084567]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ywq6d")
-text = "Sair
+text = "Sair do jogo
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
