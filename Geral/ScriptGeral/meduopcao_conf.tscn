@@ -56,7 +56,7 @@ text = "Volume
 [node name="Menu" type="Button" parent="MarginContainer/VBoxContainer" unique_id=446171997]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_8bt8k")
-text = "Menu
+text = "Menu inicial
 "
 
 [node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=650818649]

@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_volume_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Geral/ScriptGeral/Volume.tscn")
 
 
 func _on_menu_pressed() -> void:

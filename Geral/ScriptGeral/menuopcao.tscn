@@ -53,15 +53,15 @@ theme_override_fonts/font = ExtResource("2_wgm8w")
 text = "Volume
 "
 
+[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer" unique_id=46018195]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wgm8w")
+text = "Menu inicial"
+
 [node name="Voltar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=427023056]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wgm8w")
 text = "Voltar"
-
-[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer" unique_id=46018195]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_wgm8w")
-text = "Menu"
 
 [node name="Sair" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1180489328]
 layout_mode = 2
@@ -69,6 +69,6 @@ theme_override_fonts/font = ExtResource("2_wgm8w")
 text = "Sair do jogo"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
