@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cukxac0o3hx2t"]
 
 [ext_resource type="Texture2D" uid="uid://c1a2fdt86gbk4" path="res://Cenarios/taverna(nao concluida)-frame0.png" id="1_4jlfo"]
+[ext_resource type="Script" uid="uid://bjvgq3u1emaef" path="res://Historia/Prologo/balconista.gd" id="2_4uwyw"]
 [ext_resource type="Texture2D" uid="uid://djmyj2ueysj7f" path="res://Personagens/Npcs/SpriteNpc/RPG_assets.png" id="2_apfsn"]
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="3_4uwyw"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="4_xuhr5"]
@@ -425,7 +426,8 @@ load_path = "res://.godot/imported/RPG_assets.png-f9b01304faf66185ddacf495020ff3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j53vh"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xd64d"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p508u"]
+size = Vector2(71, 56)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4kdw"]
 
@@ -443,6 +445,7 @@ layer_0/tile_data = PackedInt32Array(0, 655360, 6, 65536, 655360, 7, 131072, 655
 [node name="Balconista" type="StaticBody2D" parent="NPCs" unique_id=1691936502]
 position = Vector2(55, -16)
 physics_material_override = SubResource("PhysicsMaterial_dcu6h")
+script = ExtResource("2_4uwyw")
 
 [node name="Sprite2D" type="Sprite2D" parent="NPCs/Balconista" unique_id=1844755488]
 texture = SubResource("CompressedTexture2D_84r7y")
@@ -456,7 +459,8 @@ shape = SubResource("CircleShape2D_j53vh")
 [node name="Interactable" type="Area2D" parent="NPCs/Balconista" unique_id=684373730]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Balconista/Interactable" unique_id=1768429527]
-shape = SubResource("CircleShape2D_xd64d")
+position = Vector2(-9.5, 21)
+shape = SubResource("RectangleShape2D_p508u")
 
 [node name="Bardo" type="CharacterBody2D" parent="NPCs" unique_id=1564068322]
 physics_interpolation_mode = 1
@@ -522,5 +526,8 @@ scale = Vector2(0.19230771, 1)
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("3_4uwyw")]
 position = Vector2(-5, -16)
+
+[connection signal="body_entered" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_entered"]
+[connection signal="body_exited" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_exited"]
 
 [editable path="Doors/Door_porto"]

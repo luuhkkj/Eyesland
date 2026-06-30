@@ -2133,4 +2133,10 @@ autoplay = &"Fogueira"
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("2_l2eii")]
 position = Vector2(62, 107)
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=104148267]
+limit_left = 0
+limit_top = 0
+limit_right = 384
+limit_bottom = 207
+
 [editable path="Doors/Door_p"]

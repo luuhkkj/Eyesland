@@ -3,8 +3,8 @@ extends CanvasLayer
 var dialog_lines : Array[String] = []
 var current_line_index = 0
 
-@onready var text_label = $Control/NinePatchRect/MarginContainer/HBoxContainer/RichTextLabel
-@onready var box = $Control
+@onready var text_label = $Background/HContainer/VContainer/Dialog
+@onready var box = $Background
 
 func start_dialogue(lines: Array[String]):
 	dialog_lines = lines

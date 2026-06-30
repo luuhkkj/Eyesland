@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialogueManager="*uid://be78wh58gpd2j"
 NavigationManager="*uid://chakegqjgnm28"
 TransitionScreen="*uid://c0t2e5co4h4dg"
+DialogScreen="*uid://cadns2yw6nkim"
 
 [dialogic]
 

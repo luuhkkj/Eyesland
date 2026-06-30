@@ -9,30 +9,20 @@ line_spacing = 0.0
 font = ExtResource("2_qpejx")
 shadow_color = Color(0.6901961, 0.35686275, 0.17254902, 1)
 
-[node name="DialogScreen" type="Control" unique_id=1991999785 node_paths=PackedStringArray("_name", "_dialog", "_faceset")]
-custom_minimum_size = Vector2(320, 80)
-layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -160.0
-offset_top = -100.0
-offset_right = 160.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="DialogScreen" type="CanvasLayer" unique_id=540841367 node_paths=PackedStringArray("_name", "_dialog", "_faceset")]
 script = ExtResource("1_qpejx")
-_name = NodePath("Background/HContainer/VContainer/Name")
-_dialog = NodePath("Background/HContainer/VContainer/Dialog")
+_name = NodePath("Background/HContainer/vContainer/Name")
+_dialog = NodePath("Background/HContainer/vContainer/Dialog")
 _faceset = NodePath("Background/HContainer/Border/FaceSet")
 
 [node name="Background" type="ColorRect" parent="." unique_id=840447478]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 126.0
+offset_right = -7.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5882353)
@@ -74,17 +64,17 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VContainer" type="VBoxContainer" parent="Background/HContainer" unique_id=14739173]
+[node name="vContainer" type="VBoxContainer" parent="Background/HContainer" unique_id=14739173]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Name" type="Label" parent="Background/HContainer/VContainer" unique_id=1245677737]
+[node name="Name" type="Label" parent="Background/HContainer/vContainer" unique_id=1245677737]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_j53vh")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Dialog" type="RichTextLabel" parent="Background/HContainer/VContainer" unique_id=827717639]
+[node name="Dialog" type="RichTextLabel" parent="Background/HContainer/vContainer" unique_id=827717639]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.80784315)
@@ -94,3 +84,7 @@ theme_override_fonts/normal_font = ExtResource("3_nknur")
 theme_override_font_sizes/normal_font_size = 7
 text = "
 "
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="Background/HContainer/vContainer" unique_id=1735776069]
+layout_mode = 2
+theme_override_constants/separation = 1
