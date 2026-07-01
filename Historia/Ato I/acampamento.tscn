@@ -2140,7 +2140,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_6h5lb"]
 resource_name = "shine"
-length = 0.5
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2148,10 +2148,10 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.06666667, 0.5, 0.96666664),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.5529412)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.39215687), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s82s5"]
@@ -2190,15 +2190,6 @@ frame = 1
 libraries/ = SubResource("AnimationLibrary_euavb")
 autoplay = &"Fogueira"
 
-[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("2_l2eii")]
-position = Vector2(62, 107)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=104148267]
-limit_left = 0
-limit_top = 0
-limit_right = 384
-limit_bottom = 207
-
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_q6kpn")]
 visible = false
 
@@ -2216,14 +2207,24 @@ shape = SubResource("RectangleShape2D_xjrgw")
 
 [node name="ColorRect" type="ColorRect" parent="Dialogodiario" unique_id=358951555]
 modulate = Color(1, 1, 1, 0)
-offset_left = -8.0
-offset_top = -13.0
-offset_right = 12.0
-offset_bottom = 10.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 7.0
+offset_bottom = 2.0
 script = ExtResource("7_xjrgw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogodiario/ColorRect" unique_id=1129361581]
 libraries/ = SubResource("AnimationLibrary_s82s5")
+autoplay = &"shine"
+
+[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("2_l2eii")]
+position = Vector2(62, 107)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=104148267]
+limit_left = 0
+limit_top = 0
+limit_right = 384
+limit_bottom = 207
 
 [connection signal="body_entered" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_entered"]
 [connection signal="body_exited" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_exited"]
