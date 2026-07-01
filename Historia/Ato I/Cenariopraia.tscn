@@ -76,7 +76,7 @@ libraries/ = SubResource("AnimationLibrary_5q3e7")
 autoplay = &"Ondas"
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("2_skl61")]
-position = Vector2(150, 116)
+position = Vector2(155, 117)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=61989052]
 zoom = Vector2(1.1, 1.1)
@@ -86,5 +86,6 @@ limit_right = 442
 limit_bottom = 213
 
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_ew0iv")]
+visible = false
 
 [editable path="Doors/Door_"]

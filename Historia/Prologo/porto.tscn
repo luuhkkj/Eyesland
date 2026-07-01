@@ -2182,10 +2182,9 @@ destination_level_tag = "praia"
 destination_door_tag = "w"
 
 [node name="CollisionShape2D" parent="Doors2/Door_" index="0" unique_id=1274858101]
-visible = false
+position = Vector2(-2, 1)
 
 [node name="Spawn" parent="Doors2/Door_" index="1" unique_id=1965571795]
-visible = false
 position = Vector2(-41, -1)
 
 [node name="Pescador" type="Sprite2D" parent="." unique_id=1320849199]
@@ -2199,6 +2198,7 @@ libraries/ = SubResource("AnimationLibrary_rurre")
 autoplay = &"Pescador"
 
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("6_ywjqi")]
+visible = false
 
 [editable path="Doors/Door"]
 [editable path="Doors2/Door_"]

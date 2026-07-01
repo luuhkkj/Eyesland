@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_xo376"]
 [ext_resource type="Texture2D" uid="uid://bqq375y75em3v" path="res://Cenarios/pedaço da fogueira.png" id="4_q6kpn"]
 [ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="5_q6kpn"]
+[ext_resource type="Script" uid="uid://cb473wo0ye2g1" path="res://Geral/colisoes/diario.gd" id="6_euavb"]
+[ext_resource type="Script" uid="uid://bows0kdtt63lh" path="res://Geral/color_rect.gd" id="7_xjrgw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kv7c"]
 texture = ExtResource("1_mv2hs")
@@ -2102,6 +2104,63 @@ _data = {
 &"RESET": SubResource("Animation_q6kpn")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjrgw"]
+size = Vector2(44, 44)
+
+[sub_resource type="Animation" id="Animation_4od8a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nhy10"]
+resource_name = "notshine"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5529412), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6h5lb"]
+resource_name = "shine"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.5529412)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s82s5"]
+_data = {
+&"RESET": SubResource("Animation_4od8a"),
+&"notshine": SubResource("Animation_nhy10"),
+&"shine": SubResource("Animation_6h5lb")
+}
+
 [node name="Acampamento" type="Node2D" unique_id=2131497574]
 
 [node name="acampamento" type="TileMap" parent="." unique_id=1516709133]
@@ -2141,5 +2200,32 @@ limit_right = 384
 limit_bottom = 207
 
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_q6kpn")]
+visible = false
+
+[node name="Dialogodiario" type="Node2D" parent="." unique_id=228226743]
+position = Vector2(278, 83)
+script = ExtResource("6_euavb")
+
+[node name="Interactive" type="Area2D" parent="Dialogodiario" unique_id=1730519460]
+position = Vector2(-6, 5)
+disable_mode = 2
+
+[node name="Diario" type="CollisionShape2D" parent="Dialogodiario/Interactive" unique_id=1271537895]
+position = Vector2(1, -6)
+shape = SubResource("RectangleShape2D_xjrgw")
+
+[node name="ColorRect" type="ColorRect" parent="Dialogodiario" unique_id=358951555]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -13.0
+offset_right = 12.0
+offset_bottom = 10.0
+script = ExtResource("7_xjrgw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogodiario/ColorRect" unique_id=1129361581]
+libraries/ = SubResource("AnimationLibrary_s82s5")
+
+[connection signal="body_entered" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_entered"]
+[connection signal="body_exited" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_exited"]
 
 [editable path="Doors/Door_p"]
