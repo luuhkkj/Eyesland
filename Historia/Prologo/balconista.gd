@@ -1,6 +1,7 @@
 extends Node2D # Pode ser CharacterBody2D dependendo de como você criou o Balconista
 
 var jogador_na_area = false
+var bardessa_ja_cantou = false
 
 # Função acionada quando algo entra no retângulo do Interactable
 func _on_interactable_body_entered(body):
@@ -23,25 +24,35 @@ func iniciar_conversa():
 	# 1. Primeiro criamos a variável com os textos e escolhas
 	var falas_teste = {
 		0: {
-			"title": "Balconista",
-			"dialog": "Ahoy, marujo! O que te traz à minha taverna hoje?",
-			"faceset": "res://icon.svg",
-			"choices": [
-				{"text": "Estou procurando pistas sobre um naufrágio...", "next_id": 1},
-				{"text": "Apenas um caneco de rum, por favor.", "next_id": 2}
-			]
+			"title": "Gragas",
+			"dialog": "Ora, ora... um rosto novo por aqui. Nunca te vi nesta taverna.",
+			"faceset": "res://gragas.svg"
 		},
 		1: {
-			"title": "Balconista",
-			"dialog": "Naufrágio, eh? As águas andam traiçoeiras. Aqueles recifes escondem muitos segredos.",
-			"faceset": "res://icon.svg",
-			"end": true # <--- AVISO DE FIM DE ROTA
+			"title": "Flint",
+			"dialog": "Primeira vez no porto. E já preciso de uma bebida.",
+			"faceset": "res://icon.svg"
 		},
 		2: {
-			"title": "Balconista",
-			"dialog": "Saindo um caneco do nosso melhor rum para acalmar a tempestade!",
-			"faceset": "res://icon.svg",
-			"end": true # <--- AVISO DE FIM DE ROTA
+			"title": "Gragas",
+			"dialog": "Boa. Aqui a gente faz duas coisas: serve bebida e escuta problema. Qual vai ser a sua?",
+			"faceset": "res://gragas.svg",
+			"choices": [
+				{"text": "Vou querer uma pinga paizão", "next_id": 3}, # Aponta para a resposta da pinga
+				{"text": "Apenas um caneco de rum, por favor.", "next_id": 4}  # Aponta para a resposta do rum
+			]
+		},
+		3: {
+			"title": "Gragas",
+			"dialog": "A bebida só é um problema quando a caneca está vazia! HAHA! (Te serve a pinga)",
+			"faceset": "res://gragas.svg",
+			"end": true # Finaliza a conversa se escolher pinga
+		},
+		4: { # <-- Criamos um ID 4 exclusivo para a resposta do Rum
+			"title": "Gragas",
+			"dialog": "Eu quero ver beber mais do que eu! (Te serve um caneco de rum)",
+			"faceset": "res://gragas.svg",
+			"end": true # Finaliza a conversa se escolher rum
 		}
 	}
 	
@@ -50,3 +61,21 @@ func iniciar_conversa():
 	DialogScreen._id = 0
 	DialogScreen.show()
 	DialogScreen._initialize_dialog()
+	
+	# === A MÁGICA DA CUTSCENE COMEÇA AQUI ===
+	# Se ela ainda não cantou, nós chamamos a cena
+	if not bardessa_ja_cantou:
+		bardessa_ja_cantou = true
+		chamar_a_bardessa()
+
+# === NOVA FUNÇÃO DIRETORA ===
+func chamar_a_bardessa():
+	# 1. Espera pacientemente até que o balão de diálogo seja fechado
+	while DialogScreen.visible:
+		await get_tree().create_timer(0.1).timeout
+	
+	# 2. Espera mais 2 segundos de silêncio para dar o "clima" da taverna
+	await get_tree().create_timer(2.0).timeout
+	
+	# 3. Chama o nó do Bardo (olhando a árvore de cena, ele é "irmão" do Balconista)
+	$"../Bardessa".iniciar_canto()

@@ -48,6 +48,20 @@ func _process(_delta: float) -> void:
 func _initialize_dialog() -> void:
 	_name.text = data[_id]["title"]
 	_dialog.text = data[_id]["dialog"]
+	# 1. Define o texto na caixa
+	$Background/HContainer/vContainer/Dialog.text = data[_id]["dialog"]
+	
+	# 2. ESCONDE todas as letras imediatamente antes de qualquer coisa
+	$Background/HContainer/vContainer/Dialog.visible_characters = 0
+	
+	# 3. Cria a animação (Tween) para mostrar letra por letra
+	var tween = create_tween()
+	var velocidade_da_letra = 0.03 # Quanto menor o número, mais rápido digita
+	var quantidade_de_letras = $Background/HContainer/vContainer/Dialog.text.length()
+	var tempo_total = velocidade_da_letra * quantidade_de_letras
+	
+	# Faz a propriedade "visible_characters" ir de 0 até o total de letras
+	tween.tween_property($Background/HContainer/vContainer/Dialog, "visible_characters", quantidade_de_letras, tempo_total)
 	_faceset.texture = load(data[_id]["faceset"])
 	
 
