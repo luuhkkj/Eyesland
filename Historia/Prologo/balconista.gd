@@ -1,6 +1,7 @@
 extends Node2D # Pode ser CharacterBody2D dependendo de como você criou o Balconista
 
 var jogador_na_area = false
+var bardessa_ja_cantou = false
 
 # Função acionada quando algo entra no retângulo do Interactable
 func _on_interactable_body_entered(body):
@@ -60,3 +61,21 @@ func iniciar_conversa():
 	DialogScreen._id = 0
 	DialogScreen.show()
 	DialogScreen._initialize_dialog()
+	
+	# === A MÁGICA DA CUTSCENE COMEÇA AQUI ===
+	# Se ela ainda não cantou, nós chamamos a cena
+	if not bardessa_ja_cantou:
+		bardessa_ja_cantou = true
+		chamar_a_bardessa()
+
+# === NOVA FUNÇÃO DIRETORA ===
+func chamar_a_bardessa():
+	# 1. Espera pacientemente até que o balão de diálogo seja fechado
+	while DialogScreen.visible:
+		await get_tree().create_timer(0.1).timeout
+	
+	# 2. Espera mais 2 segundos de silêncio para dar o "clima" da taverna
+	await get_tree().create_timer(2.0).timeout
+	
+	# 3. Chama o nó do Bardo (olhando a árvore de cena, ele é "irmão" do Balconista)
+	$"../Bardessa".iniciar_canto()

@@ -84,6 +84,7 @@ theme_override_fonts/normal_font = ExtResource("3_nknur")
 theme_override_font_sizes/normal_font_size = 7
 text = "
 "
+visible_characters_behavior = 2
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="Background/HContainer/vContainer" unique_id=1735776069]
 layout_mode = 2

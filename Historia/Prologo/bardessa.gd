@@ -1,52 +1,52 @@
-#extends Node2D # Pode ser CharacterBody2D dependendo de como você criou a Bardessa
-#
-#var jogador_na_area = false
-#
-## Função acionada quando algo entra no retângulo do Interactable
-#func _on_interactable_body_entered(body):
-	## Verifica se quem entrou foi o jogador (ajuste "Player" se o seu nó tiver outro nome)
-	#if body.name == "Player":
-		#jogador_na_area = true
-#
-## Função acionada quando algo sai do retângulo
-#func _on_interactable_body_exited(body):
-	#if body.name == "Player":
-		#jogador_na_area = false
-#
-## Escuta os comandos do teclado o tempo todo
-#func _unhandled_input(event):
-	## Se o jogador estiver na área E apertar a tecla configurada como "interagir" (F)
-	#if jogador_na_area and event.is_action_pressed("interagir"):
-		#iniciar_conversa()
-#
-#func iniciar_conversa():
-	## 1. Primeiro criamos a variável com os textos e escolhas
-	#var falas_teste = {
-		#0: {
-			#"title": "Bardessa",
-			#"dialog": "Ahoy, marujo! O que te traz à minha taverna hoje?",
-			#"faceset": "res://icon.svg",
-			#"choices": [
-				#{"text": "Estou procurando pistas sobre um naufrágio...", "next_id": 1},
-				#{"text": "Apenas um caneco de rum, por favor.", "next_id": 2}
-			#]
-		#},
-		#1: {
-			#"title": "Bardessa",
-			#"dialog": "Naufrágio, eh? As águas andam traiçoeiras. Aqueles recifes escondem muitos segredos.",
-			#"faceset": "res://icon.svg",
-			#"end": true 
-		#},
-		#2: {
-			#"title": "Bardessa",
-			#"dialog": "Saindo um caneco do nosso melhor rum para acalmar a tempestade!",
-			#"faceset": "res://icon.svg",
-			#"end": true 
-		#}
-	#}
-	#
-	## 2. Depois enviamos a variável para a interface e mandamos abrir
-	#DialogScreen.data = falas_teste
-	#DialogScreen._id = 0
-	#DialogScreen.show()
-	#DialogScreen._initialize_dialog()
+extends Node2D
+
+# Ela não precisa checar colisões ou botão F, ela canta quando é chamada!
+func iniciar_canto():
+	var falas_bardessa = {
+		0: {
+			"title": "Bardessa",
+			"dialog": "♪ (Dá um rodopio) Ninguém chega a Eyesland por engano, marujo... Não é o vento, não é o mar, não é o pano! ♪",
+			"faceset": "res://bardessa.svg"
+		},
+		1: {
+			"title": "Bardessa",
+			"dialog": "♪ A ilha canta, a ilha puxa, a ilha chama... E quem escuta o seu canto, o destino já reclama! ♪",
+			"faceset": "res://bardessa.svg"
+		},
+		2: {
+			"title": "Bardessa",
+			"dialog": "♪ Dizem que um pirata apostou o que não tinha, por um mapa rabiscado numa mesa de adivinha... ♪",
+			"faceset": "res://bardessa.svg"
+		},
+		3: {
+			"title": "Bardessa",
+			"dialog": "♪ O Tesouro de Eyesland! Ouro para comprar um rei! Mas o preço dessa viagem... ah, isso eu não te direi. (Bate palmas no ritmo) ♪",
+			"faceset": "res://bardessa.svg"
+		},
+		4: {
+			"title": "Bardessa",
+			"dialog": "♪ Então dance com as ondas, brinde ao naufrágio ideal! Conveniente é a tormenta que te joga no final! ♪",
+			"faceset": "res://bardessa.svg",
+			"choices": [
+				{"text": "Como você sabe sobre o meu mapa?!", "next_id": 5},
+				{"text": "Chega de charadas. Onde está o tesouro?", "next_id": 6}
+			]
+		},
+		5: {
+			"title": "Bardessa",
+			"dialog": "♪ (Sorri de forma misteriosa) Os ventos fofocam, as marés me contaram... E os tolos que buscam, na areia ficaram! ♪",
+			"faceset": "res://bardessa.svg",
+			"end": true
+		},
+		6: {
+			"title": "Bardessa",
+			"dialog": "♪ O tesouro está onde o mapa terminar... mas se não souber ler a ilha, de lá nunca sairá! (Sai dançando) ♪",
+			"faceset": "res://bardessa.svg",
+			"end": true
+		}
+	}
+	
+	DialogScreen.data = falas_bardessa
+	DialogScreen._id = 0
+	DialogScreen.show()
+	DialogScreen._initialize_dialog()
