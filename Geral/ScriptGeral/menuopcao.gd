@@ -1,7 +1,7 @@
 extends Control
 
 func _on_volume_pressed() -> void:
-	get_tree().change_scene_to_file("res://Geral/ScriptGeral/Volume.tscn")
+	get_tree().change_scene_to_file("res://Geral/ScriptGeral/Volumejogo.tscn")
 
 func _on_voltar_pressed() -> void:
 	print(GameManager.ultima_cena)

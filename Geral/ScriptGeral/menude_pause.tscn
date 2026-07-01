@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://c73f5h8e5u6po"]
 
 [ext_resource type="Script" uid="uid://61luqmomieap" path="res://Geral/ScriptGeral/menude_pause.gd" id="1_f8io0"]
+[ext_resource type="Texture2D" uid="uid://cqnsk5bn40llg" path="res://Geral/img/fotomenu2.png" id="2_85aqj"]
 [ext_resource type="FontFile" uid="uid://crua2ihel7n33" path="res://Geral/Fonte/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="2_e0tju"]
 
 [node name="MenudePausa" type="CanvasLayer" unique_id=1465818022]
 process_mode = 3
 script = ExtResource("1_f8io0")
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=1698011640]
+position = Vector2(185.00002, 105)
+scale = Vector2(0.25552487, 0.19313997)
+texture = ExtResource("2_85aqj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1255452912]
 anchors_preset = -1

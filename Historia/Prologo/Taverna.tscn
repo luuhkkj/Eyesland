@@ -1472,8 +1472,10 @@ position = Vector2(-24, -53)
 [node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1756881310]
 stream = ExtResource("8_4bknw")
 autoplay = true
+bus = &"Music"
 
 [node name="EfeitoSonoro" type="AudioStreamPlayer" parent="." unique_id=1066224873]
+bus = &"Effects"
 
 [connection signal="body_entered" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_exited"]

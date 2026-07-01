@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cmwo8byq5wiuq"]
+
+[ext_resource type="Script" uid="uid://c8k6ntnl4myv2" path="res://Geral/ScriptGeral/volumejogo.gd" id="1_vbuhj"]
+[ext_resource type="Texture2D" uid="uid://cqnsk5bn40llg" path="res://Geral/img/fotomenu2.png" id="2_ff8mu"]
+[ext_resource type="FontFile" uid="uid://crua2ihel7n33" path="res://Geral/Fonte/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="3_l8ccu"]
+[ext_resource type="PackedScene" uid="uid://ckalwfbh4or0d" path="res://Geral/ScriptGeral/VolumeSlider.tscn" id="4_jxfln"]
+
+[node name="Volumedentrojogo" type="Control" unique_id=661257415]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 185.0
+offset_top = 106.0
+offset_right = 185.0
+offset_bottom = 106.0
+script = ExtResource("1_vbuhj")
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=1730419099]
+position = Vector2(-1, -1)
+scale = Vector2(0.25552487, 0.19313997)
+texture = ExtResource("2_ff8mu")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1218528211]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -75.5
+offset_right = 144.0
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1652224622]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Volume Geral" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2133746646]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_l8ccu")
+text = "Volume Geral"
+
+[node name="Geral" parent="MarginContainer/VBoxContainer" unique_id=1802712763 instance=ExtResource("4_jxfln")]
+layout_mode = 2
+step = 0.01
+value = 1.0
+
+[node name="Volume da Musica" type="Label" parent="MarginContainer/VBoxContainer" unique_id=231277175]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_l8ccu")
+text = "Volume da Musica"
+
+[node name="Musica" parent="MarginContainer/VBoxContainer" unique_id=198153081 instance=ExtResource("4_jxfln")]
+layout_mode = 2
+step = 0.01
+value = 1.0
+bus_name = "Music"
+
+[node name="Volume dos Efeitos Sonoros" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1990977347]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_l8ccu")
+text = "Volume dos Efeitos Sonoros"
+
+[node name="EfeitosSonoros" parent="MarginContainer/VBoxContainer" unique_id=1827274748 instance=ExtResource("4_jxfln")]
+layout_mode = 2
+step = 0.01
+value = 1.0
+bus_name = "Effects"
+
+[node name="Voltar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=499793960]
+layout_mode = 2
+text = "Voltar"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]

@@ -47,7 +47,8 @@ text = "Volume Geral"
 
 [node name="Geral" parent="MarginContainer/VBoxContainer" unique_id=1802712763 instance=ExtResource("1_i5gi3")]
 layout_mode = 2
-bus_name = "Master"
+step = 0.01
+value = 1.0
 
 [node name="Volume da Musica" type="Label" parent="MarginContainer/VBoxContainer" unique_id=848847424]
 layout_mode = 2
@@ -56,7 +57,9 @@ text = "Volume da Musica"
 
 [node name="Musica" parent="MarginContainer/VBoxContainer" unique_id=1090822106 instance=ExtResource("1_i5gi3")]
 layout_mode = 2
-bus_name = "Musica"
+step = 0.01
+value = 1.0
+bus_name = "Music"
 
 [node name="Volume dos Efeitos Sonoros" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1910152214]
 layout_mode = 2
@@ -65,7 +68,9 @@ text = "Volume dos Efeitos Sonoros"
 
 [node name="EfeitosSonoros" parent="MarginContainer/VBoxContainer" unique_id=1598830873 instance=ExtResource("1_i5gi3")]
 layout_mode = 2
-bus_name = "EfeitosSonoros"
+step = 0.01
+value = 1.0
+bus_name = "Effects"
 
 [node name="Voltar" type="Button" parent="MarginContainer/VBoxContainer" unique_id=929892438]
 layout_mode = 2
