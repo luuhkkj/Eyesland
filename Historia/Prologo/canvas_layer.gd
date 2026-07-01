@@ -7,7 +7,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("Inventario"):
-		if inventory.is0open:
+		if inventory.is_open:
 			inventory.close()
 		else:
 			inventory.open()

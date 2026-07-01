@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://ytd4a54kmadx"]
+[gd_resource type="Resource" script_class="BebidaItem" format=3 uid="uid://ytd4a54kmadx"]
 
-[ext_resource type="Script" uid="uid://xhgjs2xinlmj" path="res://Geral/inventario/itensInventario.gd" id="1_qyr0i"]
-[ext_resource type="Texture2D" uid="uid://dfbne7j4ef6k3" path="res://Geral/img/PINGA.png" id="2_ss27w"]
+[ext_resource type="Script" uid="uid://ce5ropuko6t4e" path="res://bebida_item.gd" id="1_se5i7"]
+[ext_resource type="Texture2D" uid="uid://dfbne7j4ef6k3" path="res://Geral/img/PINGA.png" id="2_lpi13"]
 
 [resource]
-script = ExtResource("1_qyr0i")
+script = ExtResource("1_se5i7")
 name = "Pinga"
-texture = ExtResource("2_ss27w")
-metadata/_custom_type_script = "uid://xhgjs2xinlmj"
+texture = ExtResource("2_lpi13")
+max_stack = 99
+metadata/_custom_type_script = "uid://ce5ropuko6t4e"

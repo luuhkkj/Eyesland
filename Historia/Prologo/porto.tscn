@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="7_dmag4"]
 [ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="8_jo3t6"]
 [ext_resource type="PackedScene" uid="uid://81ldrh2mesxg" path="res://Geral/inventario/itempara_inventario.tscn" id="9_jo3t6"]
+[ext_resource type="Script" uid="uid://ce5ropuko6t4e" path="res://bebida_item.gd" id="10_uj4ns"]
+[ext_resource type="Texture2D" uid="uid://dfbne7j4ef6k3" path="res://Geral/img/PINGA.png" id="11_nqx5p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcbr0"]
 texture = ExtResource("1_a6g6w")
@@ -704,6 +706,7 @@ texture = ExtResource("1_a6g6w")
 142:3/0 = 0
 143:3/0 = 0
 0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
 2:4/0 = 0
 3:4/0 = 0
@@ -861,6 +864,7 @@ texture = ExtResource("1_a6g6w")
 142:4/0 = 0
 143:4/0 = 0
 0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:5/0 = 0
 2:5/0 = 0
 3:5/0 = 0
@@ -1007,6 +1011,7 @@ texture = ExtResource("1_a6g6w")
 142:5/0 = 0
 143:5/0 = 0
 0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
@@ -2132,6 +2137,13 @@ _data = {
 &"RESET": SubResource("Animation_rcbr0")
 }
 
+[sub_resource type="Resource" id="Resource_se5i7"]
+script = ExtResource("10_uj4ns")
+name = "Pinga"
+texture = ExtResource("11_nqx5p")
+max_stack = 99
+metadata/_custom_type_script = "uid://ce5ropuko6t4e"
+
 [node name="Porto" type="Node2D" unique_id=718710267]
 
 [node name="Porto" type="TileMap" parent="." unique_id=489130854]
@@ -2166,6 +2178,7 @@ libraries/ = SubResource("AnimationLibrary_qr0ei")
 autoplay = &"RESET"
 
 [node name="Doors2" type="Node2D" parent="." unique_id=1247161028]
+visible = false
 
 [node name="Door_" parent="Doors2" unique_id=1696348572 instance=ExtResource("2_rcbr0")]
 position = Vector2(209, 155)
@@ -2211,6 +2224,15 @@ editor_draw_limits = true
 
 [node name="ItemparaInventario" parent="." unique_id=1892211930 instance=ExtResource("9_jo3t6")]
 position = Vector2(293, 90)
+item_data = SubResource("Resource_se5i7")
+
+[node name="ItemparaInventario2" parent="." unique_id=1222365859 instance=ExtResource("9_jo3t6")]
+position = Vector2(276, 108)
+item_data = SubResource("Resource_se5i7")
+
+[node name="ItemparaInventario3" parent="." unique_id=726249896 instance=ExtResource("9_jo3t6")]
+position = Vector2(310, 104)
+item_data = SubResource("Resource_se5i7")
 
 [editable path="Doors/Door"]
 [editable path="Doors2/Door_"]

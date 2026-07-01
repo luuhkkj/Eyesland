@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://do2pexh25sc20"]
+
+[ext_resource type="Script" uid="uid://tylwvcaj1yi2" path="res://Geral/inventario/itens_stack_gui.gd" id="1_o5vgo"]
+[ext_resource type="FontFile" uid="uid://crua2ihel7n33" path="res://Geral/Fonte/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="2_sjoeq"]
+
+[node name="itensStackGui" type="Panel" unique_id=215969960]
+script = ExtResource("1_o5vgo")
+
+[node name="item" type="Sprite2D" parent="." unique_id=279738845]
+
+[node name="QuantityLabel" type="Label" parent="." unique_id=1135738835]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -10.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sjoeq")
+theme_override_font_sizes/font_size = 6
+text = "99"
