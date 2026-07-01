@@ -50,10 +50,7 @@ func iniciar_conversa():
 		},
 		3: {
 			"title": "Diário",
-			"dialog": "Tem que ter alguma saída desse inferno 
-			
-			       
-			clique em espaço para sair",
+			"dialog": "Tem que ter alguma saída desse inferno",
 			"faceset": "res://icon.svg",
 			
 			"end": true 
