@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="4_xuhr5"]
 [ext_resource type="Texture2D" uid="uid://dmfsutrcos1eb" path="res://Cenarios/sheet MMOVIMENTO DA TAVERNA.png" id="5_xuhr5"]
 [ext_resource type="Texture2D" uid="uid://jrcflwg634s2" path="res://Cenarios/TAVERNA ELEMENTOS COM MOVIMENTO - SHEET.png" id="6_4uwyw"]
+[ext_resource type="Texture2D" uid="uid://dwiwfwod0p1n3" path="res://Personagens/Npcs/SpriteNpc/barda - sheet.png" id="6_serjh"]
 [ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="6_xuhr5"]
 [ext_resource type="AudioStream" uid="uid://bdub2ru7hfp50" path="res://Sonoro/Musicas/Pirate Tavern_spotdown.org.mp3" id="8_4bknw"]
 
@@ -1282,13 +1283,6 @@ sources/3 = SubResource("TileSetAtlasSource_xuhr5")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p508u"]
 size = Vector2(71, 63)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_apfsn"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_g4kdw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8u172"]
-size = Vector2(75, 70)
-
 [sub_resource type="Animation" id="Animation_4uwyw"]
 length = 0.001
 tracks/0/type = "value"
@@ -1327,6 +1321,48 @@ _data = {
 &"Taverna": SubResource("Animation_xuhr5")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4kdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8u172"]
+size = Vector2(75, 70)
+
+[sub_resource type="Animation" id="Animation_serjh"]
+resource_name = "Barda"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BardaSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_axbf5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BardaSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykmem"]
+_data = {
+&"Barda": SubResource("Animation_serjh"),
+&"RESET": SubResource("Animation_axbf5")
+}
+
 [node name="Taverna" type="Node2D" unique_id=2071363005]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=691953169]
@@ -1341,11 +1377,6 @@ position = Vector2(65, -4)
 physics_material_override = SubResource("PhysicsMaterial_dcu6h")
 script = ExtResource("2_4uwyw")
 
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Balconista" unique_id=1844755488]
-hframes = 8
-vframes = 8
-frame = 9
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Balconista" unique_id=1017125338]
 shape = SubResource("CircleShape2D_j53vh")
 
@@ -1354,31 +1385,6 @@ shape = SubResource("CircleShape2D_j53vh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Balconista/Interactable" unique_id=1768429527]
 position = Vector2(-16, 23)
 shape = SubResource("RectangleShape2D_p508u")
-
-[node name="Bardo" type="CharacterBody2D" parent="NPCs" unique_id=1564068322]
-physics_interpolation_mode = 1
-position = Vector2(174, 74)
-disable_mode = 2
-collision_layer = 16
-collision_mask = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="NPCs/Bardo" unique_id=407948263]
-texture = SubResource("CompressedTexture2D_apfsn")
-hframes = 8
-vframes = 8
-frame = 12
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Bardo" unique_id=726420428]
-physics_interpolation_mode = 1
-shape = SubResource("CircleShape2D_g4kdw")
-
-[node name="Interactable" type="Area2D" parent="NPCs/Bardo" unique_id=2012274400]
-physics_interpolation_mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Bardo/Interactable" unique_id=1471284137]
-physics_interpolation_mode = 1
-position = Vector2(-3.5, 1)
-shape = SubResource("RectangleShape2D_8u172")
 
 [node name="CutsceneDirector" type="AnimationPlayer" parent="." unique_id=2073287126]
 
@@ -1429,6 +1435,35 @@ hframes = 4
 libraries/ = SubResource("AnimationLibrary_4bknw")
 autoplay = &"Taverna"
 
+[node name="Barda" type="CharacterBody2D" parent="." unique_id=1564068322]
+physics_interpolation_mode = 1
+position = Vector2(195, 79)
+disable_mode = 2
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barda" unique_id=726420428]
+physics_interpolation_mode = 1
+shape = SubResource("CircleShape2D_g4kdw")
+
+[node name="Interactable" type="Area2D" parent="Barda" unique_id=2012274400]
+physics_interpolation_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barda/Interactable" unique_id=1471284137]
+physics_interpolation_mode = 1
+position = Vector2(-3.5, 1)
+shape = SubResource("RectangleShape2D_8u172")
+
+[node name="BardaSprite" type="Sprite2D" parent="Barda" unique_id=952653753]
+position = Vector2(4.7683716e-06, -12.000002)
+scale = Vector2(0.7437506, 0.6535715)
+texture = ExtResource("6_serjh")
+hframes = 5
+
+[node name="AnimacaoBarda" type="AnimationPlayer" parent="Barda" unique_id=800343691]
+libraries/ = SubResource("AnimationLibrary_ykmem")
+autoplay = &"Barda"
+
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("3_4uwyw")]
 position = Vector2(-24, -53)
 
@@ -1437,7 +1472,6 @@ position = Vector2(-24, -53)
 [node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1756881310]
 stream = ExtResource("8_4bknw")
 autoplay = true
-bus = &"Musica"
 
 [node name="EfeitoSonoro" type="AudioStreamPlayer" parent="." unique_id=1066224873]
 
