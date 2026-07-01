@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_xo376"]
 [ext_resource type="Texture2D" uid="uid://bqq375y75em3v" path="res://Cenarios/pedaço da fogueira.png" id="4_q6kpn"]
 [ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="5_q6kpn"]
+[ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="6_xjrgw"]
+[ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="7_4od8a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3kv7c"]
 texture = ExtResource("1_mv2hs")
@@ -2141,5 +2143,11 @@ limit_right = 384
 limit_bottom = 207
 
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_q6kpn")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1866813643]
+script = ExtResource("6_xjrgw")
+
+[node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("7_4od8a")]
+metadata/_edit_use_anchors_ = true
 
 [editable path="Doors/Door_p"]

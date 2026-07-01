@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dwiwfwod0p1n3" path="res://Personagens/Npcs/SpriteNpc/barda - sheet.png" id="6_serjh"]
 [ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="6_xuhr5"]
 [ext_resource type="AudioStream" uid="uid://bdub2ru7hfp50" path="res://Sonoro/Musicas/Pirate Tavern_spotdown.org.mp3" id="8_4bknw"]
+[ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="10_axbf5"]
+[ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="11_ykmem"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4uwyw"]
 texture = ExtResource("1_apfsn")
@@ -1476,6 +1478,12 @@ bus = &"Music"
 
 [node name="EfeitoSonoro" type="AudioStreamPlayer" parent="." unique_id=1066224873]
 bus = &"Effects"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=758525746]
+script = ExtResource("11_ykmem")
+
+[node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("10_axbf5")]
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_exited"]

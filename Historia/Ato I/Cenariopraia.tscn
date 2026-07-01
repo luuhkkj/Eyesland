@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="3_skl61"]
 [ext_resource type="Texture2D" uid="uid://32dtirvpp3k1" path="res://Cenarios/ondas -Sheet.png" id="4_2imxo"]
 [ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="5_ew0iv"]
+[ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="6_jhht4"]
+[ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="7_weq5u"]
 
 [sub_resource type="Animation" id="Animation_2imxo"]
 resource_name = "Ondas"
@@ -86,5 +88,11 @@ limit_right = 442
 limit_bottom = 213
 
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_ew0iv")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1902916934]
+script = ExtResource("6_jhht4")
+
+[node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("7_weq5u")]
+metadata/_edit_use_anchors_ = true
 
 [editable path="Doors/Door_"]

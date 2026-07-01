@@ -9,6 +9,8 @@ var direction : Vector2 = Vector2.ZERO
 @onready var state_machine : PlayerStateMachine = $StateMachine
 @onready var interact_ray : RayCast2D = $InteractRay
 
+@export var inventory: Inventory
+
 func _ready() -> void:
 	state_machine.Initialize(self)
 
@@ -54,3 +56,4 @@ func _unhandled_input(event: InputEvent) -> void:
 			var target = interact_ray.get_collider()
 			if target is Interactable:
 				target.interact()
+				

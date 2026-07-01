@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bvuiqvl1bge37"]
+
+[ext_resource type="Script" uid="uid://ccg62p07qh51b" path="res://Geral/inventario/inventario.gd" id="1_4ahcr"]
+[ext_resource type="Texture2D" uid="uid://bt8trbypyktlx" path="res://Geral/img/InventoryRect.png" id="1_fqdw3"]
+[ext_resource type="PackedScene" uid="uid://8fy3ch2y7p3d" path="res://Geral/inventario/slot.tscn" id="2_w0j6r"]
+[ext_resource type="FontFile" uid="uid://crua2ihel7n33" path="res://Geral/Fonte/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="4_h8ver"]
+
+[node name="Inventario" type="Control" unique_id=1227846004]
+custom_minimum_size = Vector2(130, 83)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -41.5
+offset_right = 65.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ahcr")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=321420922]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.000015
+offset_top = -57.0
+offset_right = 94.000015
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fqdw3")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1407008719]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -34.0
+offset_right = 58.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="Slot" parent="NinePatchRect/GridContainer" unique_id=1680953440 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/GridContainer" unique_id=223916989 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/GridContainer" unique_id=725984702 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/GridContainer" unique_id=1285702979 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot5" parent="NinePatchRect/GridContainer" unique_id=1763641650 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot6" parent="NinePatchRect/GridContainer" unique_id=1615173051 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot7" parent="NinePatchRect/GridContainer" unique_id=1075306103 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot8" parent="NinePatchRect/GridContainer" unique_id=640931863 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot9" parent="NinePatchRect/GridContainer" unique_id=464743457 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot10" parent="NinePatchRect/GridContainer" unique_id=513107670 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot11" parent="NinePatchRect/GridContainer" unique_id=284277210 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot12" parent="NinePatchRect/GridContainer" unique_id=257006029 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot13" parent="NinePatchRect/GridContainer" unique_id=1553055255 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot14" parent="NinePatchRect/GridContainer" unique_id=2061637240 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Slot15" parent="NinePatchRect/GridContainer" unique_id=719069849 instance=ExtResource("2_w0j6r")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect" unique_id=282532710]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 27.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.21879482, 0.104688935, 0.070766024, 1)
+theme_override_colors/font_shadow_color = Color(0.5882353, 0.3254902, 0.2509804, 1)
+theme_override_fonts/font = ExtResource("4_h8ver")
+text = "INVENTÁRIO"

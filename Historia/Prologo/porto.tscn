@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="4_rurre"]
 [ext_resource type="Texture2D" uid="uid://cmnr2euunbkju" path="res://Geral/img/Sprite-0014-Sheet.png" id="5_rcbr0"]
 [ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="6_ywjqi"]
+[ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="7_dmag4"]
+[ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="8_jo3t6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcbr0"]
 texture = ExtResource("1_a6g6w")
@@ -2199,6 +2201,12 @@ libraries/ = SubResource("AnimationLibrary_rurre")
 autoplay = &"Pescador"
 
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("6_ywjqi")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1094853629]
+script = ExtResource("7_dmag4")
+
+[node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("8_jo3t6")]
+metadata/_edit_use_anchors_ = true
 
 [editable path="Doors/Door"]
 [editable path="Doors2/Door_"]
