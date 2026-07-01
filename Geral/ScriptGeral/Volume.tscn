@@ -17,8 +17,8 @@ grow_vertical = 2
 script = ExtResource("1_ed8di")
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=351083004]
-position = Vector2(-1, -1)
-scale = Vector2(0.25552487, 0.19313997)
+position = Vector2(-2.1457672e-06, -0.9999974)
+scale = Vector2(0.26657456, 0.19889502)
 texture = ExtResource("1_wcmkg")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=611723761]

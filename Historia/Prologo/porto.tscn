@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="6_ywjqi"]
 [ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="7_dmag4"]
 [ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="8_jo3t6"]
+[ext_resource type="PackedScene" uid="uid://81ldrh2mesxg" path="res://Geral/inventario/itempara_inventario.tscn" id="9_jo3t6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcbr0"]
 texture = ExtResource("1_a6g6w")
@@ -2164,18 +2165,6 @@ hframes = 6
 libraries/ = SubResource("AnimationLibrary_qr0ei")
 autoplay = &"RESET"
 
-[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("4_rurre")]
-position = Vector2(326.00003, 75)
-scale = Vector2(0.9821603, 1)
-
-[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=331339438]
-position = Vector2(-14, -16)
-limit_left = 0
-limit_top = 0
-limit_right = 384
-limit_bottom = 208
-editor_draw_limits = true
-
 [node name="Doors2" type="Node2D" parent="." unique_id=1247161028]
 
 [node name="Door_" parent="Doors2" unique_id=1696348572 instance=ExtResource("2_rcbr0")]
@@ -2207,6 +2196,21 @@ script = ExtResource("7_dmag4")
 
 [node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("8_jo3t6")]
 metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("4_rurre")]
+position = Vector2(326.00003, 75)
+scale = Vector2(0.9821603, 1)
+
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=331339438]
+position = Vector2(-14, -16)
+limit_left = 0
+limit_top = 0
+limit_right = 384
+limit_bottom = 208
+editor_draw_limits = true
+
+[node name="ItemparaInventario" parent="." unique_id=1892211930 instance=ExtResource("9_jo3t6")]
+position = Vector2(293, 90)
 
 [editable path="Doors/Door"]
 [editable path="Doors2/Door_"]

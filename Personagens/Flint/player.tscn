@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://borws0i4qaofy"]
 
 [ext_resource type="Script" uid="uid://b4njk6k0jgcs2" path="res://Personagens/Flint/ScriptPlayer/player.gd" id="1_4ntmi"]
-[ext_resource type="Resource" uid="uid://bbteysnec2m68" path="res://Geral/inventario/PlayerInventory.tres" id="2_1r2qj"]
+[ext_resource type="Resource" uid="uid://cok6w6mu3u3e8" path="res://Geral/inventario/PlayerInventory.tres" id="2_1r2qj"]
 [ext_resource type="Texture2D" uid="uid://crasqyykynn7v" path="res://Personagens/Flint/SpritesFlint/Sprite-0001-Sheet.png" id="2_4ntmi"]
 [ext_resource type="Script" uid="uid://47gh0avs6waa" path="res://Personagens/Flint/ScriptPlayer/player_state_machine.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://dqmyxkpwgx05e" path="res://Personagens/Flint/ScriptPlayer/state_idle.gd" id="4_gwnis"]
@@ -173,6 +173,9 @@ _data = {
 &"walk_up": SubResource("Animation_x3vf3")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xd64d"]
+radius = 18.439089
+
 [node name="Player" type="CharacterBody2D" unique_id=1088497943]
 collision_mask = 16
 motion_mode = 1
@@ -202,4 +205,7 @@ script = ExtResource("4_gwnis")
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1919441333]
 script = ExtResource("5_k53q1")
 
-[node name="InteractRay" type="RayCast2D" parent="." unique_id=2042117905]
+[node name="DetectArea" type="Area2D" parent="." unique_id=1720652828]
+
+[node name="DetectAreaCollision" type="CollisionShape2D" parent="DetectArea" unique_id=2049156973]
+shape = SubResource("CircleShape2D_xd64d")

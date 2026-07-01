@@ -2197,7 +2197,7 @@ visible = false
 
 [node name="Dialogodiario" type="Node2D" parent="." unique_id=228226743]
 position = Vector2(278, 83)
-script = ExtResource("6_euavb")
+script = ExtResource("8_euavb")
 
 [node name="Interactive" type="Area2D" parent="Dialogodiario" unique_id=1730519460]
 position = Vector2(-6, 5)
@@ -2213,7 +2213,7 @@ offset_left = -4.0
 offset_top = -8.0
 offset_right = 7.0
 offset_bottom = 2.0
-script = ExtResource("7_xjrgw")
+script = ExtResource("9_xjrgw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogodiario/ColorRect" unique_id=1129361581]
 libraries/ = SubResource("AnimationLibrary_s82s5")

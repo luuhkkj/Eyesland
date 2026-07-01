@@ -9,8 +9,8 @@ process_mode = 3
 script = ExtResource("1_f8io0")
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=1698011640]
-position = Vector2(185.00002, 105)
-scale = Vector2(0.25552487, 0.19313997)
+position = Vector2(192, 109.06249)
+scale = Vector2(0.26519337, 0.20062155)
 texture = ExtResource("2_85aqj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1255452912]

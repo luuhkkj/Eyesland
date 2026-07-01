@@ -15,8 +15,8 @@ offset_bottom = 106.0
 script = ExtResource("1_vbuhj")
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=1730419099]
-position = Vector2(-1, -1)
-scale = Vector2(0.25552487, 0.19313997)
+position = Vector2(6.9999995, 3.5624957)
+scale = Vector2(0.26657462, 0.20154235)
 texture = ExtResource("2_ff8mu")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1218528211]

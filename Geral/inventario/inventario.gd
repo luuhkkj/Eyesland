@@ -6,6 +6,7 @@ var is0open: bool = false
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 
 func _ready():
+	inventory.item_adicionado.connect(update)  # quando item entrar, chama update()
 	update()
 
 func update():

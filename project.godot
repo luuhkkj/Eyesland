@@ -25,7 +25,6 @@ NavigationManager="*uid://chakegqjgnm28"
 TransitionScreen="*uid://c0t2e5co4h4dg"
 DialogScreen="*uid://cadns2yw6nkim"
 GameManager="*uid://dgrs2aerb4kts"
-DefaultBusLayout="*uid://c85lqafgds4qf"
 
 [dialogic]
 
@@ -75,8 +74,8 @@ audio/channel_defaults={
 
 [display]
 
-window/size/viewport_width=370
-window/size/viewport_height=210
+window/size/viewport_width=384
+window/size/viewport_height=216
 window/size/mode=4
 window/stretch/mode="canvas_items"
 

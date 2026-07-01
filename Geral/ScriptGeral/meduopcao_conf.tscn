@@ -14,8 +14,8 @@ offset_bottom = 2.0
 script = ExtResource("1_rv5qi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=893076853]
-position = Vector2(187, 104.75)
-scale = Vector2(0.25621548, 0.19475137)
+position = Vector2(194.74998, 105.499985)
+scale = Vector2(0.26691988, 0.20165743)
 texture = ExtResource("2_twwa1")
 
 [node name="MarginContainer" type="ColorRect" parent="." unique_id=407326345]
