@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cv0xr2p28o2ri"
+path="res://.godot/imported/chuva lado de fora.mp3-024309f2c66c01930c714d1a6c0926a0.mp3str"
+
+[deps]
+
+source_file="res://Sonoro/Efeitos/chuva lado de fora.mp3"
+dest_files=["res://.godot/imported/chuva lado de fora.mp3-024309f2c66c01930c714d1a6c0926a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

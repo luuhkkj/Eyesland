@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bjvgq3u1emaef" path="res://Historia/Prologo/balconista.gd" id="2_4uwyw"]
 [ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="3_4uwyw"]
 [ext_resource type="Script" uid="uid://b2dc04vm6c6to" path="res://Historia/Prologo/bardessa.gd" id="4_axbf5"]
+[ext_resource type="Script" uid="uid://dk5yl56wpw55n" path="res://Historia/Prologo/zonainteracao.gd" id="4_w54p1"]
 [ext_resource type="PackedScene" uid="uid://cdcq8qjuagt7x" path="res://Geral/Elementos/Porta.tscn" id="4_xuhr5"]
 [ext_resource type="Texture2D" uid="uid://dmfsutrcos1eb" path="res://Cenarios/sheet MMOVIMENTO DA TAVERNA.png" id="5_xuhr5"]
 [ext_resource type="Texture2D" uid="uid://jrcflwg634s2" path="res://Cenarios/TAVERNA ELEMENTOS COM MOVIMENTO - SHEET.png" id="6_4uwyw"]
@@ -12,6 +13,8 @@
 [ext_resource type="AudioStream" uid="uid://bdub2ru7hfp50" path="res://Sonoro/Musicas/Pirate Tavern_spotdown.org.mp3" id="8_4bknw"]
 [ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="10_axbf5"]
 [ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="11_ykmem"]
+[ext_resource type="AudioStream" uid="uid://bwobloit01oa4" path="res://Sonoro/Efeitos/chuva no interior da taverna.mp3" id="12_iormu"]
+[ext_resource type="AudioStream" uid="uid://b4forfogkkxeu" path="res://Sonoro/Efeitos/msc bardessa.mp3" id="15_emchu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4uwyw"]
 texture = ExtResource("1_apfsn")
@@ -1386,6 +1389,7 @@ position = Vector2(-15, 26)
 shape = SubResource("CircleShape2D_j53vh")
 
 [node name="Interactable" type="Area2D" parent="NPCs/Balconista" unique_id=684373730]
+script = ExtResource("4_w54p1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Balconista/Interactable" unique_id=1768429527]
 position = Vector2(-17.25, 23)
@@ -1407,6 +1411,7 @@ shape = SubResource("CircleShape2D_g4kdw")
 
 [node name="Interactable" type="Area2D" parent="NPCs/Bardessa" unique_id=2012274400]
 physics_interpolation_mode = 1
+script = ExtResource("4_w54p1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Bardessa/Interactable" unique_id=1471284137]
 physics_interpolation_mode = 1
@@ -1484,17 +1489,28 @@ visible = false
 
 [node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1756881310]
 stream = ExtResource("8_4bknw")
-autoplay = true
+volume_db = -21.37
 bus = &"Music"
+parameters/looping = true
 
-[node name="EfeitoSonoro" type="AudioStreamPlayer" parent="." unique_id=1066224873]
+[node name="Chuva" type="AudioStreamPlayer" parent="." unique_id=1066224873]
+stream = ExtResource("12_iormu")
+autoplay = true
 bus = &"Effects"
+parameters/looping = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=758525746]
 script = ExtResource("11_ykmem")
 
 [node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("10_axbf5")]
 metadata/_edit_use_anchors_ = true
+
+[node name="Harpa" type="AudioStreamPlayer" parent="." unique_id=1091515836]
+stream = ExtResource("15_emchu")
+volume_db = -17.898
+autoplay = true
+bus = &"Effects"
+parameters/looping = true
 
 [connection signal="body_entered" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_entered"]
 [connection signal="body_exited" from="NPCs/Balconista/Interactable" to="NPCs/Balconista" method="_on_interactable_body_exited"]

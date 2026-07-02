@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://ce5ropuko6t4e" path="res://bebida_item.gd" id="10_uj4ns"]
 [ext_resource type="Texture2D" uid="uid://dfbne7j4ef6k3" path="res://Geral/img/PINGA.png" id="11_nqx5p"]
 [ext_resource type="Texture2D" uid="uid://0twvkvreoenp" path="res://Cenarios/Chuva.png" id="12_6m7kf"]
+[ext_resource type="AudioStream" uid="uid://cv0xr2p28o2ri" path="res://Sonoro/Efeitos/chuva lado de fora.mp3" id="13_48r7a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcbr0"]
 texture = ExtResource("1_a6g6w")
@@ -2289,6 +2290,12 @@ hframes = 6
 [node name="AnimaçãoChuva" type="AnimationPlayer" parent="." unique_id=2060216703]
 libraries/ = SubResource("AnimationLibrary_7d8pw")
 autoplay = &"chuva"
+
+[node name="ChuvaPorto" type="AudioStreamPlayer" parent="." unique_id=2087826027]
+stream = ExtResource("13_48r7a")
+autoplay = true
+bus = &"Effects"
+parameters/looping = true
 
 [editable path="Doors/Door"]
 [editable path="Doors2/Door_"]

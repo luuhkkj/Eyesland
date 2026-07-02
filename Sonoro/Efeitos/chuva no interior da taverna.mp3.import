@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwobloit01oa4"
+path="res://.godot/imported/chuva no interior da taverna.mp3-57e92f7e28c4e744c57d245bf24df288.mp3str"
+
+[deps]
+
+source_file="res://Sonoro/Efeitos/chuva no interior da taverna.mp3"
+dest_files=["res://.godot/imported/chuva no interior da taverna.mp3-57e92f7e28c4e744c57d245bf24df288.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

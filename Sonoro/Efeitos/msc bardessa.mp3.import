@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4forfogkkxeu"
+path="res://.godot/imported/msc bardessa.mp3-fc618c693989602496052465809df28a.mp3str"
+
+[deps]
+
+source_file="res://Sonoro/Efeitos/msc bardessa.mp3"
+dest_files=["res://.godot/imported/msc bardessa.mp3-fc618c693989602496052465809df28a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://47gh0avs6waa" path="res://Personagens/Flint/ScriptPlayer/player_state_machine.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://dqmyxkpwgx05e" path="res://Personagens/Flint/ScriptPlayer/state_idle.gd" id="4_gwnis"]
 [ext_resource type="Script" uid="uid://bsrd7qepohc02" path="res://Personagens/Flint/ScriptPlayer/state_walk.gd" id="5_k53q1"]
-[ext_resource type="Texture2D" uid="uid://cu0sk3w5b7r0t" path="res://f-pixel-art.svg" id="7_jggfa"]
+[ext_resource type="Texture2D" uid="uid://0fxeen4vh7n4" path="res://Geral/img/ButtonF.png" id="7_jggfa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j53vh"]
 
@@ -215,7 +215,6 @@ shape = SubResource("CircleShape2D_xd64d")
 visible = false
 z_index = 50
 position = Vector2(1.5, -40)
-scale = Vector2(0.125, 0.18055555)
 texture = ExtResource("7_jggfa")
 
 [connection signal="area_entered" from="DetectArea" to="." method="_on_detect_area_area_entered"]
