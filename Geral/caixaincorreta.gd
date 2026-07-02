@@ -22,7 +22,7 @@ func iniciar_conversa():
 	var falas_teste = {
 		0: {
 			"title": "Caixa",
-			"dialog": "Caixa correta, meus parabéns",
+			"dialog": "Caixa incorreta, tente novamente",
 			"faceset": "res://icon.svg",
 			
 			"end": true 
@@ -35,18 +35,3 @@ func iniciar_conversa():
 	DialogScreen._id = 0
 	DialogScreen.show()
 	DialogScreen._initialize_dialog()
-	
-	# 3. Espera o jogador fechar a caixa de diálogo
-	await DialogScreen.dialogo_finalizado
-	
-	# 4. Chama o Autoload para escurecer o ecrã
-	TransitionScreen.transition() 
-	
-	# 5. Pausa este script até o ecrã ficar totalmente preto (receber o sinal)
-	await TransitionScreen.on_transition_finished
-	
-	# 6. Só agora, com o ecrã preto, ele muda de cena
-	get_tree().change_scene_to_file("res://Historia/Ato II/estatua.tscn")
-	
-	
-	

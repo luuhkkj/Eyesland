@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal dialogo_finalizado
+
 var _step: float = 0.05
 var _id: int = 0
 var data: Dictionary = {}
@@ -24,6 +26,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		if not data.has(_id):
 			hide()
+			dialogo_finalizado.emit() # <--- ADICIONADO AQUI
 			return
 			
 		# Trava das escolhas
@@ -33,6 +36,7 @@ func _process(_delta: float) -> void:
 		# NOVA TRAVA: Se a fala estiver marcada com "end", esconde e encerra.
 		if data[_id].has("end") and data[_id]["end"] == true:
 			hide()
+			dialogo_finalizado.emit() # <--- ADICIONADO AQUI
 			return
 			
 		# Avança normalmente
@@ -40,6 +44,7 @@ func _process(_delta: float) -> void:
 		
 		if not data.has(_id):
 			hide()
+			dialogo_finalizado.emit() # <--- ADICIONADO AQUI
 			return
 			
 		_initialize_dialog()
@@ -109,4 +114,4 @@ func _initialize_dialog() -> void:
 			
 func _on_choice_selected(next_id: int) -> void:
 	_id = next_id
-	_initialize_dialog()	
+	_initialize_dialog()
