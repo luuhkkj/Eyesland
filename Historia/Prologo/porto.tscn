@@ -2254,6 +2254,7 @@ visible = false
 script = ExtResource("7_dmag4")
 
 [node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("8_jo3t6")]
+visible = false
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." unique_id=1088497943 instance=ExtResource("4_rurre")]

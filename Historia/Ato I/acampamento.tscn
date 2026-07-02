@@ -2175,8 +2175,11 @@ layer_0/tile_data = PackedInt32Array(0, 3145728, 0, 65536, 3145728, 1, 131072, 3
 
 [node name="Door_p" parent="Doors" unique_id=1700003844 instance=ExtResource("3_xo376")]
 position = Vector2(10, 110)
-destination_level_tag = "trilha"
+destination_level_tag = "praia"
 destination_door_tag = "w"
+
+[node name="CollisionShape2D" parent="Doors/Door_p" index="0" unique_id=1274858101]
+scale = Vector2(1, 1.8799988)
 
 [node name="Spawn" parent="Doors/Door_p" index="1" unique_id=1965571795]
 position = Vector2(23, -2)
@@ -2228,13 +2231,30 @@ limit_top = 0
 limit_right = 384
 limit_bottom = 207
 
-[connection signal="body_entered" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_entered"]
-[connection signal="body_exited" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_exited"]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1866813643]
+visible = false
 script = ExtResource("6_xjrgw")
 
 [node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("7_4od8a")]
 metadata/_edit_use_anchors_ = true
 
+[node name="Node2D" type="Node2D" parent="." unique_id=1714471874]
+position = Vector2(364, 128)
+
+[node name="Door_trilha" parent="Node2D" unique_id=1696348572 instance=ExtResource("3_xo376")]
+position = Vector2(8, 10)
+destination_level_tag = "trilha"
+destination_door_tag = "w"
+
+[node name="CollisionShape2D" parent="Node2D/Door_trilha" index="0" unique_id=1274858101]
+position = Vector2(1, 4)
+scale = Vector2(1, 1.7200024)
+
+[node name="Spawn" parent="Node2D/Door_trilha" index="1" unique_id=1965571795]
+position = Vector2(-38, 5)
+
+[connection signal="body_entered" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_entered"]
+[connection signal="body_exited" from="Dialogodiario/Interactive" to="Dialogodiario" method="_on_interactive_body_exited"]
+
 [editable path="Doors/Door_p"]
+[editable path="Node2D/Door_trilha"]

@@ -4398,7 +4398,7 @@ layer_0/tile_data = PackedInt32Array(65536, 7864320, 0, 131072, 7864320, 1, 1966
 [node name="Door_e" parent="Doors" unique_id=1696348572 instance=ExtResource("3_cb3jf")]
 position = Vector2(12, 109)
 scale = Vector2(1, 1.0032424)
-destination_level_tag = "praia"
+destination_level_tag = "acampamento"
 destination_door_tag = "w"
 spawn_direction = "left"
 
@@ -4424,7 +4424,7 @@ scale = Vector2(1.1900915, 0.9902699)
 
 [node name="Door_" parent="Doors2" unique_id=1296595227 instance=ExtResource("3_cb3jf")]
 position = Vector2(306.6991, 110.071)
-destination_level_tag = "acampamento"
+destination_level_tag = "antesala"
 destination_door_tag = "w"
 
 [node name="CollisionShape2D" parent="Doors2/Door_" index="0" unique_id=1274858101]
@@ -4444,8 +4444,10 @@ limit_right = 384
 limit_bottom = 224
 
 [node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("5_sk6wc")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=154970788]
+visible = false
 script = ExtResource("6_sckin")
 
 [node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("7_7ps7c")]
