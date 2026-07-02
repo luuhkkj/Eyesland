@@ -10,6 +10,7 @@ var slot_selecionado: int = -1
 
 @onready var inventory: Inventory = preload("res://Geral/inventario/PlayerInventory.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+@onready var info_panel: infoPanel = $Control
 
 func _ready():
 	add_to_group("inventario_ui")
@@ -166,3 +167,26 @@ func open():
 func close():
 	visible = false
 	is_open = false
+	
+func hovering_started(slot: SlotGui) -> void:
+	info_panel.mostrar(slot)
+
+func hovering_ended() -> void:
+	info_panel.esconder()
+	
+func _process(_delta):
+	if item_na_mao != null:
+		info_panel.esconder()
+		return
+
+	var mouse = get_global_mouse_position()
+	var em_slot_com_item = false
+
+	for slot_gui in slots:
+		if slot_gui.get_global_rect().has_point(mouse) and not slot_gui.is_empty():
+			info_panel.mostrar(slot_gui)
+			em_slot_com_item = true
+			break
+
+	if not em_slot_com_item:
+		info_panel.esconder()
