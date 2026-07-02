@@ -509,7 +509,7 @@ script = ExtResource("7_7h3ql")
 metadata/_custom_type_script = "uid://djnoehv6o2j1l"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6na4"]
-size = Vector2(43, 38)
+size = Vector2(62, 60)
 
 [node name="caverna3c" type="Node2D" unique_id=1263961459]
 
@@ -553,7 +553,7 @@ script = ExtResource("8_n8fov")
 position = Vector2(-6, -2)
 
 [node name="Caixa" type="CollisionShape2D" parent="caixadialogo/Area2D" unique_id=1294914095]
-position = Vector2(1, 8)
+position = Vector2(2, 19)
 shape = SubResource("RectangleShape2D_j6na4")
 
 [connection signal="body_entered" from="caixadialogo/Area2D" to="caixadialogo" method="_on_interactive_body_entered"]
