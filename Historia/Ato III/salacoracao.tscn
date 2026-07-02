@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cmoprv540de1t"]
+
+[ext_resource type="PackedScene" uid="uid://borws0i4qaofy" path="res://Personagens/Flint/player.tscn" id="1_stohr"]
+[ext_resource type="PackedScene" uid="uid://c73f5h8e5u6po" path="res://Geral/ScriptGeral/menude_pause.tscn" id="2_pya7e"]
+[ext_resource type="Script" uid="uid://ee40sap4118i" path="res://Historia/Prologo/canvas_layer.gd" id="3_4uddb"]
+[ext_resource type="PackedScene" uid="uid://bvuiqvl1bge37" path="res://Geral/inventario/inventario.tscn" id="4_q45y6"]
+
+[node name="Salacoracao" type="Node2D" unique_id=1343161235]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1970773641]
+format = 2
+
+[node name="Player" parent="." unique_id=1088497943 instance=ExtResource("1_stohr")]
+position = Vector2(58.000004, 97)
+scale = Vector2(0.9821603, 1)
+
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=869246773]
+position = Vector2(-14, -16)
+limit_left = 0
+limit_top = 0
+limit_right = 384
+limit_bottom = 208
+editor_draw_limits = true
+
+[node name="MenudePausa" parent="." unique_id=1465818022 instance=ExtResource("2_pya7e")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=689495019]
+script = ExtResource("3_4uddb")
+
+[node name="Inventario" parent="CanvasLayer" unique_id=1227846004 instance=ExtResource("4_q45y6")]
+visible = false
+metadata/_edit_use_anchors_ = true
