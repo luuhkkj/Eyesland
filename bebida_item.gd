@@ -5,7 +5,7 @@ func use(player) -> void:
 	var falas = {
 		0: {
 			"title": "Flint",
-			"dialog": "Arr, essa bebida tá boa demais!",
+			"dialog": "Arr, essa bebida é das boas",
 			"faceset": "res://icon.svg",
 			"end": true
 		}

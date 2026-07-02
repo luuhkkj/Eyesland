@@ -77,7 +77,11 @@ func _initialize_dialog() -> void:
 			var btn = Button.new()
 			btn.text = choice["text"]
 	# Conecta o clique do botão à função que avança o diálogo
-			btn.add_theme_font_size_override("font_size", 10)
+			btn.add_theme_font_size_override("font_size", 7)
+			btn.custom_minimum_size = Vector2(10, 20)
+			btn.pressed.connect(_on_choice_selected.bind(choice["next_id"]))
+			choices_container.add_child(btn)
+			btn.mouse_filter = Control.MOUSE_FILTER_STOP
 			btn.pressed.connect(_on_choice_selected.bind(choice["next_id"]))
 			choices_container.add_child(btn)
 
@@ -85,6 +89,23 @@ func _initialize_dialog() -> void:
 		while _dialog.visible_ratio < 1:
 			await get_tree().create_timer(_step).timeout
 			_dialog.visible_characters += 1
+			
+			# 6. Verifica se essa fala entrega algum item ao jogador
+	# 6. Verifica se essa fala entrega algum item ao jogador
+	if data[_id].has("give_item"):
+		var caminho_do_item = data[_id]["give_item"]
+		var item_resource = load(caminho_do_item) 
+		
+		if item_resource != null:
+			var inventario_global = preload("res://Geral/inventario/PlayerInventory.tres")
+			var conseguiu_inserir = inventario_global.insert(item_resource)
+			
+			if conseguiu_inserir:
+				print("SUCESSO: O item '", item_resource.name, "' foi guardado no inventário!")
+			else:
+				print("AVISO: O inventário está cheio, o item não coube!")
+		else:
+			print("ERRO FATAL: O Godot não encontrou o ficheiro no caminho exato: ", caminho_do_item)
 			
 func _on_choice_selected(next_id: int) -> void:
 	_id = next_id

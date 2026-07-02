@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://81ldrh2mesxg" path="res://Geral/inventario/itempara_inventario.tscn" id="9_jo3t6"]
 [ext_resource type="Script" uid="uid://ce5ropuko6t4e" path="res://bebida_item.gd" id="10_uj4ns"]
 [ext_resource type="Texture2D" uid="uid://dfbne7j4ef6k3" path="res://Geral/img/PINGA.png" id="11_nqx5p"]
+[ext_resource type="Texture2D" uid="uid://0twvkvreoenp" path="res://Cenarios/Chuva.png" id="12_6m7kf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcbr0"]
 texture = ExtResource("1_a6g6w")
@@ -2137,12 +2138,57 @@ _data = {
 &"RESET": SubResource("Animation_rcbr0")
 }
 
+[sub_resource type="Resource" id="Resource_q2h4o"]
+script = ExtResource("10_uj4ns")
+name = "Pinga"
+texture = ExtResource("11_nqx5p")
+max_stack = 99
+metadata/_custom_type_script = "uid://ce5ropuko6t4e"
+
 [sub_resource type="Resource" id="Resource_se5i7"]
 script = ExtResource("10_uj4ns")
 name = "Pinga"
 texture = ExtResource("11_nqx5p")
 max_stack = 99
 metadata/_custom_type_script = "uid://ce5ropuko6t4e"
+
+[sub_resource type="Animation" id="Animation_6m7kf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chuva:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_48r7a"]
+resource_name = "chuva"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chuva:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7d8pw"]
+_data = {
+&"RESET": SubResource("Animation_6m7kf"),
+&"chuva": SubResource("Animation_48r7a")
+}
 
 [node name="Porto" type="Node2D" unique_id=718710267]
 
@@ -2169,7 +2215,7 @@ position = Vector2(6.6162214, -7.4172707)
 scale = Vector2(0.25179112, 1.61)
 
 [node name="MarPorto" type="Sprite2D" parent="." unique_id=2046959825]
-position = Vector2(194, 100)
+position = Vector2(192, 109)
 texture = ExtResource("3_a6g6w")
 hframes = 6
 
@@ -2225,7 +2271,7 @@ editor_draw_limits = true
 
 [node name="ItemparaInventario" parent="." unique_id=1892211930 instance=ExtResource("9_jo3t6")]
 position = Vector2(293, 90)
-item_data = SubResource("Resource_se5i7")
+item_data = SubResource("Resource_q2h4o")
 
 [node name="ItemparaInventario2" parent="." unique_id=1222365859 instance=ExtResource("9_jo3t6")]
 position = Vector2(276, 108)
@@ -2234,6 +2280,15 @@ item_data = SubResource("Resource_se5i7")
 [node name="ItemparaInventario3" parent="." unique_id=726249896 instance=ExtResource("9_jo3t6")]
 position = Vector2(310, 104)
 item_data = SubResource("Resource_se5i7")
+
+[node name="Chuva" type="Sprite2D" parent="." unique_id=549880347]
+position = Vector2(192, 101)
+texture = ExtResource("12_6m7kf")
+hframes = 6
+
+[node name="AnimaçãoChuva" type="AnimationPlayer" parent="." unique_id=2060216703]
+libraries/ = SubResource("AnimationLibrary_7d8pw")
+autoplay = &"chuva"
 
 [editable path="Doors/Door"]
 [editable path="Doors2/Door_"]

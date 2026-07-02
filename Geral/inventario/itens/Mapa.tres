@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://bdvfa1rcxfvcj"]
+
+[ext_resource type="Script" uid="uid://xhgjs2xinlmj" path="res://Geral/inventario/itensInventario.gd" id="1_w561b"]
+[ext_resource type="Texture2D" uid="uid://bnmdo473vi83k" path="res://map (2).png" id="2_w561b"]
+
+[resource]
+script = ExtResource("1_w561b")
+name = "Mapa"
+texture = ExtResource("2_w561b")
+metadata/_custom_type_script = "uid://xhgjs2xinlmj"

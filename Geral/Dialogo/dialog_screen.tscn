@@ -45,6 +45,8 @@ grow_vertical = 2
 [node name="Border" type="ColorRect" parent="Background/HContainer" unique_id=571253990]
 custom_minimum_size = Vector2(72, 0)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
 
 [node name="FaceSet" type="TextureRect" parent="Background/HContainer/Border" unique_id=1230276440]
 z_index = 1
@@ -75,6 +77,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Dialog" type="RichTextLabel" parent="Background/HContainer/vContainer" unique_id=827717639]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.80784315)
@@ -88,4 +91,5 @@ visible_characters_behavior = 2
 
 [node name="ChoicesContainer" type="VBoxContainer" parent="Background/HContainer/vContainer" unique_id=1735776069]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/separation = 1
