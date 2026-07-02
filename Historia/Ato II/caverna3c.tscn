@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://vt48sdikdlnc" path="res://Geral/inventario/item_mundo.gd" id="6_f7mnp"]
 [ext_resource type="Script" uid="uid://djnoehv6o2j1l" path="res://chave_item.gd" id="7_7h3ql"]
 [ext_resource type="Script" uid="uid://72lyklete44s" path="res://Geral/caixadialogo.gd" id="8_n8fov"]
+[ext_resource type="Script" uid="uid://drxv8x7eedhi4" path="res://Geral/caixaincorreta.gd" id="9_y6nc4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pohtl"]
 texture = ExtResource("1_ubosq")
@@ -509,7 +510,7 @@ script = ExtResource("7_7h3ql")
 metadata/_custom_type_script = "uid://djnoehv6o2j1l"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6na4"]
-size = Vector2(43, 38)
+size = Vector2(32, 39.875)
 
 [node name="caverna3c" type="Node2D" unique_id=1263961459]
 
@@ -553,8 +554,25 @@ script = ExtResource("8_n8fov")
 position = Vector2(-6, -2)
 
 [node name="Caixa" type="CollisionShape2D" parent="caixadialogo/Area2D" unique_id=1294914095]
-position = Vector2(1, 8)
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_j6na4")
+
+[node name="caixaincorreta" type="Node2D" parent="." unique_id=2071510992]
+position = Vector2(129, 129)
+script = ExtResource("9_y6nc4")
+
+[node name="Area2D" type="Area2D" parent="caixaincorreta" unique_id=518726396]
+position = Vector2(-6, -2)
+
+[node name="Caixa" type="CollisionShape2D" parent="caixaincorreta/Area2D" unique_id=1006804856]
+position = Vector2(62, 6)
+shape = SubResource("RectangleShape2D_j6na4")
+
+[node name="Caixa2" type="CollisionShape2D" parent="caixaincorreta/Area2D" unique_id=521600202]
+position = Vector2(-7, 4)
 shape = SubResource("RectangleShape2D_j6na4")
 
 [connection signal="body_entered" from="caixadialogo/Area2D" to="caixadialogo" method="_on_interactive_body_entered"]
 [connection signal="body_exited" from="caixadialogo/Area2D" to="caixadialogo" method="_on_interactive_body_exited"]
+[connection signal="body_entered" from="caixaincorreta/Area2D" to="caixaincorreta" method="_on_interactive_body_entered"]
+[connection signal="body_exited" from="caixaincorreta/Area2D" to="caixaincorreta" method="_on_interactive_body_exited"]
