@@ -70,7 +70,7 @@ func iniciar_conversa():
 
 # === NOVA FUNÇÃO DIRETORA ===
 func chamar_a_bardessa():
-	# 1. Espera pacientemente até que o balão de diálogo seja fechado
+	# 1. Espera pacientemente atawé que o balão de diálogo seja fechado
 	while DialogScreen.visible:
 		await get_tree().create_timer(0.1).timeout
 	

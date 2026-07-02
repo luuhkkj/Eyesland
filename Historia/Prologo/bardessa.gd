@@ -4,47 +4,55 @@ extends Node2D
 func iniciar_canto():
 	var falas_bardessa = {
 		0: {
-			"title": "Bardessa",
-			"dialog": "♪ (Dá um rodopio) Ninguém chega a Eyesland por engano, marujo... Não é o vento, não é o mar, não é o pano! ♪",
-			"faceset": "res://bardessa.svg"
-		},
-		1: {
-			"title": "Bardessa",
-			"dialog": "♪ A ilha canta, a ilha puxa, a ilha chama... E quem escuta o seu canto, o destino já reclama! ♪",
-			"faceset": "res://bardessa.svg"
-		},
-		2: {
-			"title": "Bardessa",
-			"dialog": "♪ Dizem que um pirata apostou o que não tinha, por um mapa rabiscado numa mesa de adivinha... ♪",
-			"faceset": "res://bardessa.svg"
-		},
-		3: {
-			"title": "Bardessa",
-			"dialog": "♪ O Tesouro de Eyesland! Ouro para comprar um rei! Mas o preço dessa viagem... ah, isso eu não te direi. (Bate palmas no ritmo) ♪",
-			"faceset": "res://bardessa.svg"
-		},
-		4: {
-			"title": "Bardessa",
-			"dialog": "♪ Então dance com as ondas, brinde ao naufrágio ideal! Conveniente é a tormenta que te joga no final! ♪",
-			"faceset": "res://bardessa.svg",
-			"choices": [
-				{"text": "Como você sabe sobre o meu mapa?!", "next_id": 5},
-				{"text": "Chega de charadas. Onde está o tesouro?", "next_id": 6}
-			]
-		},
-		5: {
-			"title": "Bardessa",
-			"dialog": "♪ (Sorri de forma misteriosa) Os ventos fofocam, as marés me contaram... E os tolos que buscam, na areia ficaram! ♪",
-			"faceset": "res://bardessa.svg",
-			"end": true
-		},
-		6: {
-			"title": "Bardessa",
-			"dialog": "♪ O tesouro está onde o mapa terminar... mas se não souber ler a ilha, de lá nunca sairá! (Sai dançando) ♪",
-			"faceset": "res://bardessa.svg",
-			"end": true
-		}
+		"title": "Bardessa",
+		"dialog": "♪ (Dá um rodopio) Ninguém chega a Eyesland por engano, marujo... Não é o vento, não é o mar, não é o pano! ♪",
+		"faceset": "res://bardessa.svg"
+	},
+	1: {
+		"title": "Bardessa",
+		"dialog": "♪ A ilha canta, a ilha puxa, a ilha chama... E quem escuta o seu canto, o destino já reclama! ♪",
+		"faceset": "res://bardessa.svg"
+	},
+	2: {
+		"title": "Bardessa",
+		"dialog": "♪ Um navio pirata beijou os corais, afundou na tempestade e não voltou jamais... ♪",
+		"faceset": "res://bardessa.svg"
+	},
+	3: {
+		"title": "Bardessa",
+		"dialog": "♪ Das tábuas partidas, sobrou este pergaminho. Um mapa rasgado para mostrar o caminho! (Ela exibe um mapa velho) ♪",
+		"faceset": "res://bardessa.svg"
+	},
+	4: {
+		"title": "Bardessa",
+		"dialog": "♪ O Tesouro de Eyesland! Ouro e perigo num único traço! Será desafio para um pirata sem ninguém ao lado? ♪",
+		"faceset": "res://bardessa.svg",
+		"choices": [
+			{"text": "Vou encontrar os destroços. Me dê o mapa.", "next_id": 5},
+			{"text": "Parece uma armadilha. Qual é o preço?", "next_id": 6}
+		]
+	},
+	5: {
+		"title": "Bardessa",
+		"dialog": "♪ Coragem ou loucura? O mar dirá! Leve o pedaço e veja onde vai dar! (Ela te entrega o Mapa Rasgado) ♪",
+		"faceset": "res://bardessa.svg",
+		"give_item": "res://Geral/inventario/itens/Mapa.tres", # <--- NOSSO GATILHO NOVO AQUI
+		"end": true
+	},
+	6: {
+		"title": "Bardessa",
+		"dialog": "♪ O preço é a sua coragem! Leve, pois a ilha adora brincar com quem tem medo de naufrágio! (Ela te entrega o Mapa Rasgado) ♪",
+		"faceset": "res://bardessa.svg",
+		"give_item": "res://Geral/inventario/itens/Mapa.tres", # <--- NOSSO GATILHO NOVO AQUI
+		"end": true
+	},
+	7: {
+		"title": "Flint",
+		"dialog": " *Você recebeu um mapa* ",
+		"faceset": "res://icon.svg",
+		"end": true
 	}
+}
 	
 	DialogScreen.data = falas_bardessa
 	DialogScreen._id = 0

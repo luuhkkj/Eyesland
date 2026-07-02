@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c3bq3smyl5kpk"]
+
+[ext_resource type="Script" uid="uid://dubxe8afx8at8" path="res://Geral/Elementos/zonainteracao.gd" id="1_hrdpf"]
+
+[node name="CenaBalaoInterativo" type="Node2D" unique_id=1642596235]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1621996308 groups=["interativo"]]
+script = ExtResource("1_hrdpf")
