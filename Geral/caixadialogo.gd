@@ -20,7 +20,7 @@ func _on_interactive_body_exited(body: Node2D) -> void:
 func iniciar_conversa():
 	# 1. Primeiro criamos a variável com os textos e escolhas
 	var falas_teste = {
-		1: {
+		0: {
 			"title": "Caixa",
 			"dialog": "Caixa correta",
 			"faceset": "res://icon.svg",
