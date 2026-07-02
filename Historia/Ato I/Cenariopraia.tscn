@@ -56,7 +56,7 @@ layer_0/tile_data = PackedInt32Array(0, 196609, 2, 65536, 196609, 3, 131072, 196
 
 [node name="Door_" parent="Doors" unique_id=1696348572 instance=ExtResource("3_skl61")]
 position = Vector2(430, 102)
-destination_level_tag = "trilha"
+destination_level_tag = "acampamento"
 destination_door_tag = "w"
 
 [node name="CollisionShape2D" parent="Doors/Door_" index="0" unique_id=1274858101]

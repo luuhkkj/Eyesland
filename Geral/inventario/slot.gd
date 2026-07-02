@@ -1,5 +1,9 @@
 extends Button
+
 class_name SlotGui
+
+signal hovering_started
+signal hovering_ended
 
 @onready var backgroundSprite: Sprite2D = $background
 @onready var centerContainer: CenterContainer = $CenterContainer
@@ -29,3 +33,11 @@ func update(slot: inventorySlot):
 		if item_stack != null:
 			item_stack.queue_free()
 			item_stack = null
+
+
+func _on_mouse_entered() -> void:
+	hovering_started.emit(self)
+
+
+func _on_mouse_exited() -> void:
+	hovering_ended.emit(self)

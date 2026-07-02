@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://kwchvrlwxojm"]
+
+[ext_resource type="Script" uid="uid://jhpq4m606wa6" path="res://Geral/inventario/info_panel.gd" id="1_b00rw"]
+[ext_resource type="FontFile" uid="uid://crua2ihel7n33" path="res://Geral/Fonte/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="1_uk233"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j53vh"]
+font = ExtResource("1_uk233")
+font_size = 7
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=41029505]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_b00rw")
+
+[node name="Label" type="Label" parent="." unique_id=826994148]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9411765)
+theme_override_fonts/font = ExtResource("1_uk233")
+text = "item"
+label_settings = SubResource("LabelSettings_j53vh")

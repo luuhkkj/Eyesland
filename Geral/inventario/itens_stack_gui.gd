@@ -6,6 +6,9 @@ class_name ItemsStackGui
 
 var slot: inventorySlot
 
+func _ready():
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 func update():
 	if slot == null or slot.item == null:
 		return

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BebidaItem" format=3 uid="uid://ytd4a54kmadx"]
+[gd_resource type="Resource" script_class="BebidaItem" format=3 uid="uid://uboglpknnsm"]
 
 [ext_resource type="Script" uid="uid://ce5ropuko6t4e" path="res://bebida_item.gd" id="1_se5i7"]
 [ext_resource type="Texture2D" uid="uid://dfbne7j4ef6k3" path="res://Geral/img/PINGA.png" id="2_lpi13"]
